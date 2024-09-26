@@ -82,6 +82,7 @@ class NavBar extends HTMLElement {
 
     connectedCallback() {
         const menuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
+        const top = JSON.parse(this.getAttribute('top') || 0);
 
         this.shadowRoot.innerHTML = `
                     <style>                    
@@ -96,7 +97,7 @@ class NavBar extends HTMLElement {
                             padding: 0 38px;
                             height: 60px;
                             position: fixed;
-                            top: 36px;
+                            top: ${top}px;
                             left: 0;
                             right: 0;
                             transition: top 0.3s;
@@ -330,7 +331,7 @@ line-height: 28px; /* 175% */
                         <ul class="side-menu-list">
                             ${menuItems.map(item => `
                                 <li class="side-menu-item">
-                                    <a href="#">${item}</a>
+                                    <a href="../itemList">${item}</a>
                                     <span class="arrow">
                                     <img src ="../../assets/rightButton.svg"/>
                                     </span>
@@ -338,7 +339,7 @@ line-height: 28px; /* 175% */
                             `).join('')}
                         </ul>
                         <div class="additional-links">
-                            <a href="#" class="additional-link">
+                            <a href="../customerService" class="additional-link">
                                 <img src="../../assets/help.svg" alt="고객센터">
                                 고객센터
                             </a>
@@ -350,7 +351,7 @@ line-height: 28px; /* 175% */
                                 <img src="../../assets/order.svg" alt="주문">
                                 주문
                             </a>
-                            <a href="#" class="additional-link">
+                            <a href="../findStore" class="additional-link">
                                 <img src="../../assets/store.svg" alt="매장 찾기">
                                 매장 찾기
                             </a>

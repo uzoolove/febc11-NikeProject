@@ -1,7 +1,6 @@
 .container {
     display: flex;
-    height: 960px;
-    margin-top: 120px;
+    height: 960px;    
 }
 
 .sidebar {
@@ -107,6 +106,7 @@ h1 {
     .tab-section {
         display: block;
         height: 50px;
+        margin-top: 60px;
     }
 
     .sidebar {

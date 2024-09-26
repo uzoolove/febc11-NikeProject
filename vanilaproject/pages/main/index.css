@@ -35,8 +35,7 @@ line-height: 48px; /* 150% */
 
 /* 메인배너, 나이키잼, 자크뮈스 */
 .main-banner {
-    width: 100%;
-    max-width: 1920px;
+    width: 100%;    
     margin: 0 auto;
 }
 
