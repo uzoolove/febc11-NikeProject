@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike</title>
+    <script src="../../components/header/index.js"></script>
+    <script src="../../components/footer/index.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+     <!-- 상단 바 컴포넌트 사용 -->
+     <top-bar menu-items='["매장찾기", "고객센터", "가입하기", "로그인"]'></top-bar>
+    
+     <!-- 네비게이션 바 컴포넌트 사용 -->
+     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+
+     <!-- 여기부터 시작 -->
+    <div class="container">
+        <button class="filter-button">필터</button>
+        <div class="mobile-category">
+            <button>신발</button>
+            <button>탑 & 티셔츠</button>
+            <button>후디 & 크루</button>
+            <button>재킷 & 베스트</button>
+        </div>
+        <aside class="category-menu">
+            <h2>신제품 (741)</h2>
+            <ul>
+                <li>
+                    <h3>신발</h3>
+                    <ul>
+                        <li><label><input type="checkbox"> 라이프스타일</label></li>
+                        <li><label><input type="checkbox"> 러닝</label></li>
+                        <li><label><input type="checkbox"> 농구</label></li>
+                        <li><label><input type="checkbox"> 조던</label></li>
+                        <li><label><input type="checkbox"> 트레이닝 & 짐</label></li>
+                        <li><label><input type="checkbox"> 스케이트보딩</label></li>
+                        <li><label><input type="checkbox"> 골프</label></li>
+                        <li><label><input type="checkbox"> 테니스</label></li>
+                        <li><label><input type="checkbox"> 샌들 & 슬리퍼</label></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>의류</h3>
+                    <ul>
+                        <li><label><input type="checkbox"> 탑 & 티셔츠</label></li>
+                        <li><label><input type="checkbox"> 쇼츠</label></li>
+                        <li><label><input type="checkbox"> 후디 & 크루</label></li>
+                        <li><label><input type="checkbox"> 팬츠 & 타이츠</label></li>
+                        <li><label><input type="checkbox"> 재킷 & 베스트</label></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <main class="product-list">
+            <div class="product-header">
+                <h1>신제품</h1>
+                <select>
+                    <option>정렬 기준</option>
+                    <option>신상품순</option>
+                    <option>판매순</option>
+                    <option>가격 낮은순</option>
+                    <option>가격 높은순</option>
+                </select>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5fe30fc4-3273-4700-9751-125ac5af831e/%ED%83%80%EC%9D%B4%ED%8A%80-2-pf-%EB%82%A8%EC%84%B1-%EA%B3%A8%ED%94%84%ED%99%94.png" alt="타이틀 2 PF">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>타이틀 2 PF</h3>
+                        <p>남성 골프화</p>
+                        <p class="price">149,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <!-- 추가 상품 카드들 -->
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/fdded470-0ac5-4bd7-b41b-1bb94cf44d15/%EC%A1%B0%EB%8D%98-%EB%84%A5%EC%8A%A4%ED%8A%B8-%EB%84%A4%EC%9D%B4%EC%B2%98-5-%EB%82%A8%EC%84%B1-%EC%8B%A0%EB%B0%9C.png" alt="조던 넥스트 네이처 5">
+                    <div class="product-info">
+                        <p class="new-label">신제품</p>
+                        <h3>조던 넥스트 네이처 5</h3>
+                        <p>남성 신발</p>
+                        <p class="price">209,000 원</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+    <nike-footer></nike-footer>
+</body>
+</html>

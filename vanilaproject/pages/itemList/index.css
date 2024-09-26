@@ -1,0 +1,135 @@
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 176px;
+}
+.category-menu {
+    width: 200px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    padding-right: 20px;
+}
+.category-menu h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.category-menu ul {
+    list-style-type: none;
+}
+.category-menu li {
+    margin-bottom: 10px;
+}
+.category-menu label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.category-menu input[type="checkbox"] {
+    margin-right: 10px;
+}
+.product-list {
+    flex-grow: 1;
+}
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-info h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.product-info p {
+    font-size: 14px;
+    color: #757575;
+    margin-bottom: 5px;
+}
+.product-info .price {
+    font-weight: bold;
+}
+select {
+    padding: 5px;
+}
+.mobile-category, .filter-button {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .category-menu {
+        display: none;
+    }
+    .product-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .product-header h1 {
+        margin-bottom: 10px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-card {
+        display: flex;
+        padding: 0;
+        border: none;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .product-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    .product-info {
+        flex-grow: 1;
+    }
+    .mobile-category {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 15px;
+        -webkit-overflow-scrolling: touch;
+    }
+    .mobile-category button {
+        margin-right: 10px;
+        white-space: nowrap;
+        background: none;
+        border: 1px solid #e5e5e5;
+        border-radius: 20px;
+        padding: 5px 10px;
+    }
+    .filter-button {
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        background: none;
+        border: 1px solid #e5e5e5;
+        border-radius: 20px;
+    }
+}
