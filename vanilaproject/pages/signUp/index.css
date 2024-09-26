@@ -1,0 +1,54 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+.nike-logo {
+    width: 50px;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.input-group {
+    margin-bottom: 20px;
+}
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.name-inputs {
+    display: flex;
+    gap: 10px;
+}
+.name-inputs input {
+    flex: 1;
+}
+.btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.help-text {
+    font-size: 12px;
+    color: #8d8d8d;
+    margin-top: 10px;
+}
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+}

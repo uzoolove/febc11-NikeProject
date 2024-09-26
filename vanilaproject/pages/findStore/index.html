@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이키 매장 찾기</title>
+    <script src="../../components/header/index.js"></script>
+    <script src="../../components/footer/index.js"></script>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="./index.css">
+    
+</head>
+<body>
+      <!-- 상단 바 컴포넌트 사용 -->
+      <top-bar menu-items='["매장찾기", "고객센터", "가입하기", "로그인"]'></top-bar>
+    
+      <!-- 네비게이션 바 컴포넌트 사용 -->
+      <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+
+      
+    <div class="tab-section">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('map')">Map</button>
+            <button class="tab-button" onclick="showTab('list')">List</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h1>나이키 매장 찾기</h1>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="위치 검색">
+            </div>
+            <ul class="store-list">
+                <li class="store-item">
+                    <div class="store-name">Nike House of Innovation NYC</div>
+                    <div class="store-address">650 5th Avenue</div>
+                    <div class="store-address">New York, NY 10019-6106, US</div>
+                    <div class="store-distance">영업 중 • 1일 오전 10:00에 배송 시작</div>
+                </li>
+                <!-- 다른 매장 항목들... -->
+            </ul>
+        </div>
+        <div class="map-container active">
+            <!-- 여기에 실제 지도가 들어갑니다 -->
+            <div class="map">
+                <img src="../../assets/map.svg"/>
+            </div>
+        </div>
+    </div>
+    <nike-footer></nike-footer>
+    <script>
+        function showTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-button');
+            const sidebar = document.querySelector('.sidebar');
+            const mapContainer = document.querySelector('.map-container');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            if (tabName === 'map') {
+                document.querySelector('.tab-button:first-child').classList.add('active');
+                sidebar.classList.remove('active');
+                mapContainer.classList.add('active');
+            } else {
+                document.querySelector('.tab-button:last-child').classList.add('active');
+                sidebar.classList.add('active');
+                mapContainer.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

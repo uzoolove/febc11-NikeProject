@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Sign In</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="./index.css">  
+</head>
+<body>
+    <div class="container">
+        <img src="../../assets/logo.svg" alt="Nike Logo" class="nike-logo">
+        <div class="step active" id="step1">
+            <h1>가입 또는 로그인을 위해 이메일을 입력해주세요.</h1>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="이메일" required>
+            </div>
+            <p class="help-text">계속 진행하시면 나이키의 개인정보 처리방침 및 이용약관에 동의하시는 것으로 간주됩니다.</p>
+            <button class="btn" id="continueBtn">계속</button>           
+        </div>
+        <div class="step" id="step2">
+            <h1>비밀번호를 입력하세요.</h1>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="비밀번호" required>
+            </div>
+            <div class="btn-container">
+               
+            <button class="btn btn-secondary" id="backBtn">이전</button>
+            <button class="btn" id="loginBtn">로그인</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const continueBtn = document.getElementById('continueBtn');
+        const loginBtn = document.getElementById('loginBtn');
+        const backBtn = document.getElementById('backBtn');
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+
+        continueBtn.addEventListener('click', () => {
+            step1.classList.remove('active');
+            step2.classList.add('active');
+        });
+
+        backBtn.addEventListener('click', () => {
+            step2.classList.remove('active');
+            step1.classList.add('active');
+        });       
+    </script>
+</body>
+</html>

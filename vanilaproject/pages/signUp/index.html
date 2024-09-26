@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike 회원가입</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="./index.css">  
+</head>
+<body>
+    <div class="container">
+        <img src="../../assets/logo.svg" alt="Nike Logo" class="nike-logo">
+        <h1>이제 나이키 멤버가 되어볼까요?</h1>
+        <form>
+            <div class="name-inputs">
+                <div class="input-group">
+                    <input type="text" id="firstName" placeholder="이름" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="lastName" placeholder="성" required>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" placeholder="비밀번호" required>
+            </div>
+            <div class="input-group">
+                <input type="date" id="birthdate" required>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="agreeTerms" required>
+                <label for="agreeTerms">나이키의 개인정보 처리방침 및 이용약관에 동의합니다.</label>
+            </div>
+            <button type="submit" class="btn">계정 만들기</button>
+        </form>        
+    </div>
+</body>
+</html>
