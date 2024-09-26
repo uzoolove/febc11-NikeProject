@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .nav-button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .membership-card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .membership-card {
+            flex: 0 0 calc(33.333% - 14px);
+            display: flex;
+            flex-direction: column;
+        }
+        .membership-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .membership-card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .membership-card-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .membership-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            align-self: flex-start;
+        }
+
+        @media (max-width: 768px) {
+            .membership-card-container {
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 20px;
+            }
+            .membership-card {
+                flex: 0 0 80%;
+                scroll-snap-align: start;
+            }
+            .membership-card:last-child {
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Membership Benefits</h1>
+            <div class="nav-buttons">
+                <button class="nav-button">&lt;</button>
+                <button class="nav-button">&gt;</button>
+            </div>
+        </div>
+        <div class="membership-card-container">
+            <div class="membership-card">
+                <img src="https://via.placeholder.com/400x300" alt="멤버십 혜택 1">
+                <div class="membership-card-content">
+                    <h2 class="membership-card-title">멤버 전용 제품</h2>
+                    <p class="membership-card-subtitle">새로운 스타일을 가장 먼저 만나보세요</p>
+                    <a href="#" class="membership-btn">구매하기</a>
+                </div>
+            </div>
+            <div class="membership-card">
+                <img src="https://via.placeholder.com/400x300" alt="멤버십 혜택 2">
+                <div class="membership-card-content">
+                    <h2 class="membership-card-title">멤버 전용 혜택</h2>
+                    <p class="membership-card-subtitle">다양한 멤버 전용 혜택을 누려보세요</p>
+                    <a href="#" class="membership-btn">자세히 보기</a>
+                </div>
+            </div>
+            <div class="membership-card">
+                <img src="https://via.placeholder.com/400x300" alt="멤버십 혜택 3">
+                <div class="membership-card-content">
+                    <h2 class="membership-card-title">나이키 앱</h2>
+                    <p class="membership-card-subtitle">나이키 앱에서 더 많은 혜택을 만나보세요</p>
+                    <a href="#" class="membership-btn">다운로드</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

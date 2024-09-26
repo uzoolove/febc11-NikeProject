@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Main Banner</title>
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="./index.css">        
+    <link rel="stylesheet" href="./index.css">
     <script src="../../components/header/index.js"></script>
     <script src="../../components/footer/index.js"></script>
 </head>
+
 <body>
-      <!-- 상단 바 컴포넌트 사용 -->
-      <top-bar menu-items='["매장찾기", "고객센터", "가입하기", "로그인"]'></top-bar>
-    
-      <!-- 네비게이션 바 컴포넌트 사용 -->
-      <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
- 
+    <!-- 상단 바 컴포넌트 사용 -->
+    <top-bar menu-items='["매장찾기", "고객센터", "가입하기", "로그인"]'></top-bar>
+
+    <!-- 네비게이션 바 컴포넌트 사용 -->
+    <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+
     <div class="container">
         <!-- 메인배너 -->
         <div class="main-banner">
-            <img src="https://via.placeholder.com/1920x1080" alt="Main Banner" class="banner-image">
+            <img src="../../assets/banner.png" alt="Main Banner" class="banner-image">
             <div class="banner-content">
                 <h1 class="banner-title">아무나 오를 수 없는 승자의 자리.</h1>
                 <p class="banner-subtitle">모두를 위한 스포츠 정신을 전하는 것</p>
@@ -28,192 +30,216 @@
         </div>
 
         <!-- Win On Air -->
-        <h1>Win On Air</h1>
+       <section>
+        <h1 style="margin-bottom: 24px;">Win On Air</h1>
         <div class="card-container">
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/FFA500" alt="의류" class="card-image">
+                <img src="../../assets/Figure1.png" alt="의류" class="card-image">
                 <div class="card-content">
+                    <span></span>
                     <h2 class="card-title">의류</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/FFFFFF" alt="신발" class="card-image">
+                <img src="../../assets/Figure2.png" alt="신발" class="card-image">
                 <div class="card-content">
+                    <span></span>
                     <h2 class="card-title">신발</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/0000FF" alt="액세서리 & 용품" class="card-image">
+                <img src="../../assets/Figure3.png" alt="액세서리 & 용품" class="card-image">
                 <div class="card-content">
+                    <span></span>
                     <h2 class="card-title">액세서리 & 용품</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
         </div>
+       </section>
 
         <!-- 나이키 잼 -->
         <div class="main-banner">
-            <img src="https://via.placeholder.com/1920x1080" alt="Main Banner" class="banner-image">
+            <img src="../../assets/nikeJam.png" alt="Main Banner" class="banner-image">
             <div class="banner-content">
-                <h1 class="banner-title">아무나 오를 수 없는 승자의 자리.</h1>
-                <p class="banner-subtitle">모두를 위한 스포츠 정신을 전하는 것</p>
-                <a href="#" class="cta-button">자세히 보기</a>
+                <h2>신제품</h2>
+                <h1 class="banner-title">나이키 잼</h1>
+                <p class="banner-subtitle">브레이킹을 위해 탄생한 나이키 잼 컬렉션을 만나 보세요.</p>
+                <a href="#" class="cta-button">구매하기</a>
             </div>
         </div>
 
         <!-- 자크뮈스 -->
         <div class="main-banner">
-            <img src="https://via.placeholder.com/1920x1080" alt="Main Banner" class="banner-image">
+            <img src="../../assets/jacquemus.png" alt="Main Banner" class="banner-image">
             <div class="banner-content">
-                <h1 class="banner-title">아무나 오를 수 없는 승자의 자리.</h1>
-                <p class="banner-subtitle">모두를 위한 스포츠 정신을 전하는 것</p>
-                <a href="#" class="cta-button">자세히 보기</a>
+                <h2>새로운 컬렉션</h2>
+                <h1 class="banner-title">나이키 X 자크뮈스</h1>
+                <p class="banner-subtitle">세련된 실루엣과 감각적인 컬러가 조화를 이루는 나이키 X 자크뮈스 컬렉션은 스포츠웨어에 새로운 변화를 불러일으킵니다.</p>
+                <a href="#" class="cta-button">컬렉션 구매하기</a>
             </div>
         </div>
 
         <!-- Tending Now -->
+       <section>
         <div class="header">
             <h1>Trending Now</h1>
             <div class="navigation">
-                <button class="nav-button">&lt;</button>
-                <button class="nav-button">&gt;</button>
+                <button class="nav-button left"></button>
+                <button class="nav-button right"></button>
             </div>
         </div>
         <div class="card-container">
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/FFA500" alt="의류" class="card-image">
-                <div class="card-content">
+                <img src="../../assets/figure4.png" alt="의류" class="card-image">
+                <div class="card-content">         
+                    <span></span>           
                     <h2 class="card-title">의류</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/FFFFFF" alt="신발" class="card-image">
+                <img src="../../assets/figure4.png" alt="신발" class="card-image">
                 <div class="card-content">
+                    <span></span>
                     <h2 class="card-title">신발</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300/0000FF" alt="액세서리 & 용품" class="card-image">
+                <img src="../../assets/figure4.png" alt="액세서리 & 용품" class="card-image">
                 <div class="card-content">
+                    <span></span>
                     <h2 class="card-title">액세서리 & 용품</h2>
                     <a href="#" class="card-button">구매하기</a>
                 </div>
             </div>
         </div>
-    </div>
-   
-    <!-- Featured -->
-    <h1>Featured</h1>
-    <div class="featured-grid">
-        <div class="featured-item">
-            <img src="https://via.placeholder.com/600x400" alt="나이키 브라">
-            <a href="#" class="featured-button">나이키 브라 매장</a>
+
+       </section>
+        <!-- Featured -->
+       <section>
+        <h1 style="margin-bottom: 24px;">Featured</h1>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="https://via.placeholder.com/600x400" alt="나이키 브라">
+                <a href="#" class="featured-button">워크아웃 에센셜</a>
+                <a href="#" class="featured-button">구매하기</a>
+            </div>
+            <div class="featured-item">
+                <img src="https://via.placeholder.com/600x400" alt="나이키 에코프로 9">
+                <a href="#" class="featured-button">나이키 메트콘 9</a>
+                <a href="#" class="featured-button">구매하기</a>
+            </div>
         </div>
-        <div class="featured-item">
-            <img src="https://via.placeholder.com/600x400" alt="나이키 에코프로 9">
-            <a href="#" class="featured-button">나이키 에코프로 9 구매하기</a>
+       </section>
+
+        <!-- Always Iconic -->
+        <section>
+            <h1 style="margin-bottom: 24px;">Always Iconic</h1>
+        <div class="slider-container">
+            <div class="slider" id="slider">
+                <div class="slide">
+                    <img src="../../assets/shose.png" alt="코르테즈">                    
+                </div>
+                <div class="slide">
+                    <img src="../../assets/shose.png" alt="코르테즈">                                      
+                </div>
+                <div class="slide">
+                    <img src="../../assets/shose.png" alt="코르테즈">                                     
+                </div>
+                <div class="slide">
+                    <img src="../../assets/shose.png" alt="코르테즈">                                       
+                </div>
+            </div>
+            <button class="slider-button prev" onclick="slide(-1)">&lt;</button>
+            <button class="slider-button next" onclick="slide(1)">&gt;</button>
         </div>
+        </section>
+
+        <!-- Shop by Sport -->
+       <section class="sport-section">
+        <div class="header">
+            <h1>Shop by Sport</h1>
+            <div class="navigation">
+                <button class="nav-button left"></button>
+                <button class="nav-button right"></button>
+            </div>
+        </div>
+        <div class="sport-card-container">
+            <div class="sport-card">
+                <img src="../../assets/thumbnail.png" alt="나이키 트레이닝">
+                <div class="sport-card-content">
+                    <h2 class="sport-card-title">나이키 트레이닝</h2>
+                    <p class="sport-card-subtitle">한계에 도전하는 여성과 함께할 아이템</p>
+                    <a href="#" class="sport-btn">구매하기</a>
+                </div>
+            </div>
+            <div class="sport-card">
+                <img src="../../assets/thumbnail.png" alt="나이키 축구">
+                <div class="sport-card-content">
+                    <h2 class="sport-card-title">나이키 축구</h2>
+                    <p class="sport-card-subtitle">경기 중 독보적인 존재감을 드러낼 아이템</p>
+                    <a href="#" class="sport-btn">구매하기</a>
+                </div>
+            </div>
+            <div class="sport-card">
+                <img src="../../assets/thumbnail.png" alt="나이키 농구">
+                <div class="sport-card-content">
+                    <h2 class="sport-card-title">나이키 농구</h2>
+                    <p class="sport-card-subtitle">경기를 빛내줄 스타일</p>
+                    <a href="#" class="sport-btn">구매하기</a>
+                </div>
+            </div>
+        </div>
+       </section>
+
+        <!-- 나이키 멤버십 -->
+      <section>
+        <div class="header">
+            <h1>나이키 멤버십</h1>
+            <div class="navigation">
+                <span>멤버 가입하기</span>
+                <button class="nav-button left"></button>
+                <button class="nav-button right"></button>
+            </div>
+        </div>
+        <div class="membership-card-container">
+            <div class="membership-card">
+                <img src="../../assets/figure4.png" alt="멤버십 혜택 1">
+                <div class="membership-card-content">
+                    <p class="membership-card-subtitle">새로운 스타일을 가장 먼저 만나보세요</p>
+                    <h2 class="membership-card-title">멤버 전용 제품</h2>                    
+                    <a href="#" class="membership-btn">구매하기</a>
+                </div>
+            </div>
+            <div class="membership-card">
+                <img src="../../assets/figure4.png" alt="멤버십 혜택 2">
+                <div class="membership-card-content">
+                    <p class="membership-card-subtitle">다양한 멤버 전용 혜택을 누려보세요</p>
+                    <h2 class="membership-card-title">멤버 전용 혜택</h2>                    
+                    <a href="#" class="membership-btn">자세히 보기</a>
+                </div>
+            </div>
+            <div class="membership-card">
+                <img src="../../assets/figure4.png" alt="멤버십 혜택 3">
+                <div class="membership-card-content">
+                    <p class="membership-card-subtitle">나이키 앱에서 더 많은 혜택을 만나보세요</p>
+                    <h2 class="membership-card-title">나이키 앱</h2>                    
+                    <a href="#" class="membership-btn">다운로드</a>
+                </div>
+            </div>
+        </div>
+      </section>
     </div>
 
-    <!-- Always Iconic -->
-    <h1>Always Iconic</h1>
-    <div class="slider-container">
-        <div class="slider" id="slider">
-            <div class="slide">
-                <img src="https://via.placeholder.com/300x300" alt="코르테즈">
-                <p class="slide-title">코르테즈</p>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/300x300" alt="페가수스">
-                <p class="slide-title">페가수스</p>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/300x300" alt="V2K 런">
-                <p class="slide-title">V2K 런</p>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/300x300" alt="에어맥스">
-                <p class="slide-title">에어맥스</p>
-            </div>
-        </div>
-        <button class="slider-button prev" onclick="slide(-1)">&lt;</button>
-        <button class="slider-button next" onclick="slide(1)">&gt;</button>
-    </div>
 
-    <!-- Shop by Sport -->
-    <div class="header">
-        <h1>Shop by Sport</h1>
-        <div class="navigation">
-            <button class="nav-button">&lt;</button>
-            <button class="nav-button">&gt;</button>
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 트레이닝" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 트레이닝</h2>
-                <p class="card-description">헬스장 운동부터 집에서 하는 동작까지</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 트레일 러닝" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 트레일 러닝</h2>
-                <p class="card-description">새로운 모험에서 얻는 영감과 에너지</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 축구" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 축구</h2>
-                <p class="card-description">경기 동안 빛나는 초고속 스피드와 마인드</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- 나이키 멤버십 -->
-    <div class="header">
-        <h1>Shop by Sport</h1>
-        <div class="navigation">
-            <span>멤버 가입하기</span>
-            <button class="nav-button">&lt;</button>
-            <button class="nav-button">&gt;</button>
-        </div>
-    </div>
-    <div class="card-container">
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 트레이닝" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 트레이닝</h2>
-                <p class="card-description">헬스장 운동부터 집에서 하는 동작까지</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 트레일 러닝" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 트레일 러닝</h2>
-                <p class="card-description">새로운 모험에서 얻는 영감과 에너지</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/400x300" alt="나이키 축구" class="card-image">
-            <div class="card-content">
-                <h2 class="card-title">나이키 축구</h2>
-                <p class="card-description">경기 동안 빛나는 초고속 스피드와 마인드</p>
-                <a href="#" class="card-button">구매하기</a>
-            </div>
-        </div>
-    </div>
+
+
+
     <nike-footer></nike-footer>
     <script>
         const slider = document.getElementById('slider');
@@ -236,4 +262,5 @@
         window.addEventListener('resize', updateSlider);
     </script>
 </body>
+
 </html>

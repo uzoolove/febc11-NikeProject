@@ -1,18 +1,100 @@
+/* 컨테이너 속성 */
+.container {
+    /* background: red; */
+    padding: 48px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 84px;
+}
+
+section h1 {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 48px; /* 150% */
+}
+
+@media (max-width: 768px) { 
+    .container {
+        margin-top: 60px;
+        padding: 24px;
+    }
+
+    section h1 {
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 150% */
+    }
+}
+
+/* 메인배너, 나이키잼, 자크뮈스 */
 .main-banner {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
 }
+
 .banner-image {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
 }
 .banner-content {
-    text-align: center;
-    padding: 40px 20px;
+    text-align: center;    
     background-color: white;
 }
+
+.banner-content > h1 {
+    padding-top: 36px;
+    color: var(--111111, #111);
+text-align: center;
+font-size: 60px;
+font-style: normal;
+font-weight: 900;
+line-height: 72px; /* 120% */
+text-transform: uppercase;
+}
+
+.banner-content h2 {
+    color: var(--111111, #111);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+padding-top: 36px;
+margin-bottom: -28px;
+}
+
+.banner-content > p {
+    padding-top: 8px;
+    color: var(--111111, #111);
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+
+.banner-content > a {
+    padding: 6px 15.68px 6px 16px;
+    color: var(--FFFFFF, #FFF);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+}
+
 .banner-title {
     font-size: 36px;
     color: #111;
@@ -51,68 +133,133 @@
         display: flex;
 flex-direction: column;
 align-items: flex-start;
+    }    
+
+    .banner-content > h1 {
+        padding-top: 24px;
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 40px;
+font-style: normal;
+font-weight: 500;
+line-height: 48px; /* 120% */
+text-transform: uppercase;
+text-align: left;
+    }
+
+    .banner-content h2 {
+        padding-top: 24px;
+        margin-bottom: 0px;
+    }
+    
+    .banner-content > p {
+        padding-top: 24px;
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+text-align: left;
+    }
+
+    .main-banner img {
+        min-height: 457px;        
     }
 }
 
 /* Win On Air */
 
-.header {
+.header {    
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 }
 
+.header span {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+}
+
 .navigation {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 .nav-button {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
-    background-color: #e5e5e5;
+    border-radius: 24px;
+background: var(--F5F5F5, #F5F5F5);
     border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 18px;
+    align-items: center;    
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.card-container {
+.left {
+    background-image: url(../../assets/left.svg);
+}
+
+.right {
+    background-image: url(../../assets/right.svg);
+}
+
+.card-container {    
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
 }
 .card {
-    flex: 0 0 auto;
-    width: calc(33.333% - 14px);
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex: 0 0 auto;    
+    width: calc(33.333% - 14px);    
+    background-color: white;     
 }
-.card-image {
+.card-image {    
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
 }
 .card-content {
-    padding: 20px;
+    bottom: 48px;
+    left: 48px;
+    position: absolute;    
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 .card-title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: var(--FFFFFF, #FFF);
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
 }
 .card-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #111;
-    color: white;
+    padding: 6px 16px;
+    background-color: #fff;    
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 14px;
+    border-radius: 30px;    
+    color: var(--111111, #111);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */    
 }
 @media (max-width: 768px) {
     body {
@@ -126,7 +273,33 @@ align-items: flex-start;
     }
     .card {
         width: 80%;
-        scroll-snap-align: start;
+        scroll-snap-align: start;      
+        flex-direction: column;  
+    }
+
+    .card-title {
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 35px; /* 175% */
+    }
+
+    .card-button {
+        background-color: #111;
+        color: var(--FFFFFF, #FFF);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+    }
+
+    .card-content {
+          position: static;
+          align-items: flex-start;
     }
     .card:last-child {
         margin-right: 20px;
@@ -135,10 +308,6 @@ align-items: flex-start;
 
 /* Featured */
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
 .featured-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -155,14 +324,23 @@ h1 {
 }
 .featured-button {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
+    bottom: 48px;    
+    left: 48px;
+    color: var(--111111, #111);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    border-radius: 30px;
+    background: var(--FFFFFF, #FFF);
     text-decoration: none;
-    font-size: 14px;
-    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+.featured-grid .featured-button:nth-last-of-type(1) {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -175,17 +353,35 @@ h1 {
     }
     .featured-button {
         position: static;
-        margin-top: 10px;
+        margin-top: 24px;
         align-self: flex-start;
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 150% */
+        background: #fff;
+        padding: 0;
+    }
+
+    .featured-grid .featured-button:nth-last-of-type(1) {
+        display: block;
+        color: var(--FFFFFF, #FFF);
+        text-align: center;
+        font-family: "Noto Sans KR";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px; /* 175% */
+        border-radius: 30px;
+background: var(--111111, #111);
+padding: 6px 16px;
     }
 }
 
 /* Always Iconic */
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 .slider-container {
     position: relative;
 }
@@ -197,9 +393,8 @@ h1 {
     -webkit-overflow-scrolling: touch;
 }
 .slide {
-    flex: 0 0 auto;
-    width: 300px;
-    margin-right: 20px;
+    flex: 0 0 auto;    
+    margin-right: 16px;
     scroll-snap-align: start;
 }
 .slide img {
@@ -226,10 +421,10 @@ h1 {
 }
 
 .slider-button.prev {
-    left: -20px;
+    left: 52px;
 }
 .slider-button.next {
-    right: -20px;
+    right: 52px;
 }
 
 @media (max-width: 768px) {
@@ -237,7 +432,7 @@ h1 {
         padding: 20px 0 20px 20px;
     }
     .slider {
-        overflow-x: auto;
+        overflow-x: auto;        
     }
     .slider-button {
         display: none;
@@ -245,26 +440,188 @@ h1 {
     .slide:last-child {
         margin-right: 20px;
     }
+
+    .slide {
+        width: 80%;
+    }
+
+    .slide img {
+        width: 100%;
+    }
 }
 
 /* Shop By Sport */
 
-  @media (max-width: 768px) {
-            .card-container {
-                grid-template-columns: 1fr;
-            }
-            .card {
-                display: flex;
-                align-items: center;
-            }
-            .card-image {
-                width: 40%;
-                height: 120px;
-            }
-            .card-content {
-                width: 60%;
-            }
-            .navigation {
-                display: none;
-            }
-        }
+.sport-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.sport-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.sport-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+.sport-card-title {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
+}
+
+.sport-card-subtitle {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+.sport-btn {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    padding-bottom: 9px;
+    border-bottom: 1px solid #111;
+}
+
+.sport-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .sport-section .navigation {
+        display: none;
+    }
+    .sport-card-container {
+        flex-direction: column;
+    }
+    .sport-card {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+    .sport-card img {
+        width: 110px;
+        height: 110px;
+        order: 2;
+        border-radius: 10px;
+    }
+    .sport-card-content {
+        width: 60%;
+        order: 1;
+    }
+
+    .sport-card-title {
+        color: var(--707072, #707072);
+        font-family: "Noto Sans KR";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24.5px; /* 175% */
+    }
+
+    .sport-card-subtitle {
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 35px; /* 175% */
+    }
+
+    .sport-btn {
+        display: none;
+    }
+}
+
+/* 멤버십 */
+
+.membership-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.membership-card {
+    flex: 0 0 calc(33.333% - 14px);
+    display: flex;
+    flex-direction: column;    
+}
+.membership-card img {
+    width: 100%;
+    height: auto;
+    display: block;    
+}
+
+.membership-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.membership-card-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 150% */
+}
+.membership-card-subtitle {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+}
+.membership-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: var(--FFFFFF, #FFF);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .membership-card-container {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 20px;
+    }
+    .membership-card {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+    .membership-card:last-child {
+        margin-right: 20px;
+    }
+}
