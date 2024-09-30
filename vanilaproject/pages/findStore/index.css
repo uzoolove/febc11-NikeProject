@@ -1,11 +1,13 @@
 .container {
     display: flex;
-    height: 960px;    
+    /* height: 960px;     */
+    margin-top: 60px;
+    margin-bottom: 48px;
 }
 
 .sidebar {
-    width: 400px;
-    padding: 20px;
+    width: 630px;
+    padding: 0 32px 32px 48px ;
     overflow-y: auto;
     border-right: 1px solid #e5e5e5;
 }
@@ -16,59 +18,86 @@
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
+margin-top: 36px;
+    margin-bottom: 44px;
+    
 }
 
 .search-container {
     margin-bottom: 20px;
+    padding-right: 32px;
+}
+
+.search-container span {
+    color: var(--707072, #707072);
+font-family: "Noto Sans KR";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24.5px; /* 175% */
 }
 
 .search-input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    width: 100%;        
     border: 1px solid #ccc;
+    padding: 10px;
     border-radius: 4px;
+    margin-bottom: 28.75px;    
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
 }
 
 .store-list {
     list-style-type: none;
 }
 
-.store-item {
-    padding: 15px 0;
+.store-item {    
     border-bottom: 1px solid #e5e5e5;
+    padding: 24px 0;
 }
 
 .store-name {
-    font-weight: bold;
-    margin-bottom: 5px;
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
 }
 
 .store-address,
 .store-distance {
-    font-size: 14px;
-    color: #666;
+    color: var(--111111, #707072);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 .tab-section {
-    display: none;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #e5e5e5;
+    display: none;    
 }
 
 .tab-buttons {
-    display: flex;
+    display: flex;    
 }
 
-.tab-button {
-    flex: 1;
+.tab-button {    
     padding: 10px;
-    text-align: center;
-    background-color: #f9f9f9;
+    text-align: center;    
     border: none;
     cursor: pointer;
+    background: none;    
 }
 
 .tab-button.active {
@@ -87,13 +116,15 @@ h1 {
 
 .map img {
     width: 100%;
-    height: 100%;
+    height: 100%;    
     object-fit: cover;
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        margin-bottom: 48px;
+        margin-top: 0;
     }
 
     .sidebar,
@@ -104,8 +135,7 @@ h1 {
     }
 
     .tab-section {
-        display: block;
-        height: 50px;
+        display: block;        
         margin-top: 60px;
     }
 
@@ -115,6 +145,7 @@ h1 {
 
     .sidebar.active,
     .map-container.active {
-        display: block;
+        display: block;    
+        max-height: 50vh;    
     }
 }
