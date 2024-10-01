@@ -1,51 +1,98 @@
 .container {
-    max-width: 400px;
+    max-width: 502px;
     margin: 0 auto;
 }
 h1 {
     font-size: 28px;
-    margin-bottom: 20px;
+    padding-top: 20px;    
 }
-.nike-logo {
-    width: 50px;
-    margin-bottom: 20px;
-}
+
 .input-group {
-    margin-bottom: 20px;
+    display: flex;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--707072, #707072);
+    overflow: hidden;    
+    margin-top: 60px;
+    align-items: center;
 }
 input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #e5e5e5;
-    border-radius: 3px;
+    margin: 12px;            
+    border: none;    
+    font-family: Pretendard;
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */       
 }
 .btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #000;
-    color: white;
+    display: inline-flex;
+    padding: 12px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: var(--111111, #111);
     border: none;
-    border-radius: 3px;
-    font-size: 16px;
-    cursor: pointer;
+    color: var(--FFFFFF, #FFF);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+margin-top: 64px;
 }
 .btn-container {
     display: flex;
+    justify-content: space-between;
 }
 .btn-secondary {
     background-color: white;
-    color: #000;
-    border: 1px solid #e5e5e5;
+    color: #000;        
+    border: 1px solid var(--111111, #111);
 }
 .help-text {
-    font-size: 12px;
-    color: #8d8d8d;
-    margin-top: 20px;
+    color: #757575;
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    padding-top: 46px;
+}
+.help-text a {
+    text-decoration: underline;
 }
 .step {
     display: none;
 }
 .step.active {
     display: block;
+}
+
+.user-email {
+    margin-top: 10px;
+    color: var(--111111, #111);
+font-family: Pretendard;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    .input-group {
+        margin-top: 28px;
+    }
+
+    .btn {
+        margin-top: 40px;
+    }
 }
