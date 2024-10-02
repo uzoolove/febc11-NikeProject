@@ -94,7 +94,7 @@ class NavBar extends HTMLElement {
                             justify-content: space-between;
                             align-items: center;
                             background-color: white;
-                            padding: 0 38px;
+                            padding: 0 24px;
                             height: 60px;
                             position: fixed;
                             top: ${top}px;
@@ -199,7 +199,8 @@ class NavBar extends HTMLElement {
                             justify-content: center;
                             gap: 20px;
                             margin-top: 30px;
-                            margin-bottom: 40px;                            
+                            margin-bottom: 40px;  
+                            width: 100%;                          
                         }
                         .auth-button {
                             padding: 6px 16px;
