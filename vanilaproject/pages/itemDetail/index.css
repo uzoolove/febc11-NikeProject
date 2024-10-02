@@ -1,0 +1,331 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+    margin-top: 60px;
+}
+
+.product-images {
+    width: 65%;
+    position: sticky;
+    top: 24px;
+    height: calc(100vh - 40px);
+    display: flex;
+    align-self: flex-start;
+}
+
+.prodcut-mobile {
+    display: none;
+}
+
+.thumbnail-list {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    max-height: 668.75px;
+    overflow-y: scroll;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 4px;    
+}
+
+.main-image-container {
+    width: 100%;
+    flex-grow: 1;
+    max-height: 668.75px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    width: 35%;
+    padding-left: 32px;
+    overflow-y: auto;
+}
+
+.product-material {
+    color: #D33918;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+}
+
+.product-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 150% */
+}
+
+.product-category {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+}
+
+.product-price {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+    padding-top: 32px;
+}
+
+.product-size {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+    padding-top: 32px;
+}
+
+.size-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding-top: 9px;
+}
+
+.size-button {
+    height: 48px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--E5E5E5, #E5E5E5);
+    background: none;
+    cursor: pointer;
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 175% */
+}
+
+.add-to-cart {
+    margin-top: 32px;
+}
+
+.add-to-cart,
+.wishlist {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart {
+    border-radius: 30px;
+    background: var(--111111, #111);
+    color: var(--FFFFFF, #FFF);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+}
+
+.wishlist {
+    color: var(--111111, #111);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+    border-radius: 30px;
+    border: 1px solid var(--CACACB, #CACACB);
+    background: none;
+    margin-top: 12px;
+}
+
+.product-caption {
+    color: var(--111111, #111);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 175% */
+    padding: 24px 21.16px 24px 21.34px;
+    background: var(--F5F5F5, #F5F5F5);
+    margin-top: 32px;
+}
+
+.product-description {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 175% */
+    margin-top: 62px;
+}
+
+.toggle-section {
+    border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
+    background: rgba(255, 255, 255, 0.00);    
+}
+
+.toggle-section:first-child {
+    background: red;
+}
+
+.toggle-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    /* 150% */
+    padding: 30px 0;
+}
+
+.toggle-content {
+    display: none;
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 17px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .product-title {
+        order: -1;        
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px; /* 175% */
+    }
+
+    .product-category {
+        color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    }
+
+    .size-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 7px;
+    }
+
+    .product-caption {
+        display: none;
+    }
+    .product-images {
+        width: 100vw;        
+        position: static;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .main-image-container {
+        order: -1;
+        border-radius: 0;
+        padding-top: 24px;
+        margin-left: -24px;
+    }
+
+    .thumbnail-list {        
+        flex-direction: row;
+        overflow-x: auto;
+        margin-top: 3px;
+        margin-right: 0;    
+        margin-left: -24px;    
+    }
+
+    .thumbnail {        
+        margin-bottom: 0;
+        width: 125px;
+        height: 125px;
+    }
+
+    .product-info {
+        width: 100%;
+        padding-left: 0;
+        
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .product {
+        display: none;
+    }
+
+    .prodcut-mobile {
+        display: block;        
+    }
+
+    .product-price {
+        padding-top: 12px;
+    }
+
+    .toggle-title {
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35px; /* 175% */
+    }
+
+    .toggle-content {
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+    line-height: normal;
+    }
+}
