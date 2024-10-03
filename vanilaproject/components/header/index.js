@@ -14,8 +14,7 @@ class TopBar extends HTMLElement {
                             display: block;
                             height: 36px;
                             background-color: #f5f5f5;
-                            padding: 0 38px;
-                            position: fixed;
+                            padding: 0 38px;                            
                             top: 0;
                             left: 0;
                             right: 0;
@@ -94,18 +93,17 @@ class NavBar extends HTMLElement {
                             justify-content: space-between;
                             align-items: center;
                             background-color: white;
-                            padding: 0 24px;
-                            height: 60px;
-                            position: fixed;
+                            padding: 0 48px;
+                            height: 60px;                            
                             top: ${top}px;
                             left: 0;
                             right: 0;
                             transition: top 0.3s;
-                            z-index: 1000;                            
+                            z-index: 1000;                                          
                         }
                         .navbar.hidden {
-                            top: -60px;
-                        }
+                            top: -60px;                            
+                        }                            
                         .logo {
                             width: 78.48px;
                             height: 78.47px;
@@ -267,6 +265,7 @@ line-height: 28px; /* 175% */
                         @media (max-width: 768px) {
                             .navbar {
                                 top:0px;
+                                padding: 0 24px;
                             }
                             .menu-list, .search-box {
                                 display: none;
@@ -371,14 +370,14 @@ line-height: 28px; /* 175% */
         const topBarHeight = 36;  // 상단 바의 높이
 
         window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > lastScrollTop && scrollTop > (navbarHeight + topBarHeight)) {
-                navbar.classList.add('hidden');
-            } else {
-                navbar.classList.remove('hidden');
-            }            
-            lastScrollTop = scrollTop;
+            // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;            
+
+            // if (scrollTop > lastScrollTop && scrollTop > (navbarHeight + topBarHeight)) {
+            //     navbar.classList.add('hidden');
+            // } else {
+            //     navbar.classList.remove('hidden');
+            // }            
+            // lastScrollTop = scrollTop;
         });
     }
 

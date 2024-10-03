@@ -1,8 +1,7 @@
 /* 컨테이너 속성 */
 .container {
     /* background: red; */
-    padding: 48px;
-    margin-top: 100px;
+    padding: 48px;    
     display: flex;
     flex-direction: column;
     gap: 84px;
@@ -18,8 +17,7 @@ line-height: 48px; /* 150% */
 }
 
 @media (max-width: 768px) { 
-    .container {
-        margin-top: 60px;
+    .container {        
         padding: 24px;
     }
 
@@ -260,10 +258,7 @@ line-height: 36px; /* 150% */
     font-weight: 500;
     line-height: 28px; /* 175% */    
 }
-@media (max-width: 768px) {
-    body {
-        padding: 20px 0 20px 20px;
-    }
+@media (max-width: 768px) {  
     .card-container {
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -426,10 +421,7 @@ padding: 6px 16px;
     right: 52px;
 }
 
-@media (max-width: 768px) {
-    body {
-        padding: 20px 0 20px 20px;
-    }
+@media (max-width: 768px) {   
     .slider {
         overflow-x: auto;        
     }
