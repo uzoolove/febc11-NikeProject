@@ -52,7 +52,7 @@ class TopBar extends HTMLElement {
                         ${menuItems.map(item => `<li><a href="../${this.movePage(item)}">${item}</a></li>`).join('')}
                     </ul>
                 `;
-    }    
+    }
 
     movePage(page) {
         if (page == '매장찾기') {
@@ -99,7 +99,8 @@ class NavBar extends HTMLElement {
                             left: 0;
                             right: 0;
                             transition: top 0.3s;
-                            z-index: 1000;                                          
+                            z-index: 1000;     
+                            position: fixed;                                                                 
                         }
                         .navbar.hidden {
                             top: -60px;                            
@@ -205,12 +206,12 @@ class NavBar extends HTMLElement {
                             border-radius: 999px;
                             color: var(--FFFFFF, #FFF);
                             text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-text-decoration: none;
+                            font-family: "Noto Sans KR";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px; /* 175% */
+                            text-decoration: none;
                         }
                         .signup {
                             background-color: black;
@@ -359,8 +360,8 @@ line-height: 28px; /* 175% */
                     </div>
                 `;
 
-                this.setupScrollBehavior();
-                this.setupSideMenu();
+        this.setupScrollBehavior();
+        this.setupSideMenu();
     }
 
     setupScrollBehavior() {
@@ -370,14 +371,14 @@ line-height: 28px; /* 175% */
         const topBarHeight = 36;  // 상단 바의 높이
 
         window.addEventListener('scroll', () => {
-            // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;            
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;            
 
-            // if (scrollTop > lastScrollTop && scrollTop > (navbarHeight + topBarHeight)) {
-            //     navbar.classList.add('hidden');
-            // } else {
-            //     navbar.classList.remove('hidden');
-            // }            
-            // lastScrollTop = scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > (navbarHeight + topBarHeight)) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }            
+            lastScrollTop = scrollTop;
         });
     }
 
