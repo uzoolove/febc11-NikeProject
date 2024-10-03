@@ -1,77 +1,3 @@
-
-class TopBar extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
-
-    connectedCallback() {
-        const menuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
-
-        this.shadowRoot.innerHTML = `
-                    <style>
-                        :host {
-                            display: block;
-                            height: 36px;
-                            background-color: #f5f5f5;
-                            padding: 0 38px;                            
-                            top: 0;
-                            left: 0;
-                            right: 0;
-                            z-index: 1001;
-                        }
-                        .top-menu {
-                            display: flex;
-                            justify-content: flex-end;
-                            list-style-type: none;
-                            margin: 0;
-                            padding: 0;
-                            height: 100%;
-                        }
-                        .top-menu li {
-                            margin-left: 12px;
-                            display: flex;
-                            align-items: center;
-                        }
-                        .top-menu li a {
-                            text-decoration: none;
-                          color: var(--111111, #111);
-                          font-size: 12px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: 21px; /* 175% */
-                        }
-
-                          @media (max-width: 768px) {
-                            :host {
-                                display: none;                                
-                            }
-                          }
-                    </style>
-                    <ul class="top-menu">
-                        ${menuItems.map(item => `<li><a href="../${this.movePage(item)}">${item}</a></li>`).join('')}
-                    </ul>
-                `;
-    }
-
-    movePage(page) {
-        if (page == '매장찾기') {
-            return 'findStore';
-        } else if (page == '고객센터') {
-            return 'customerService';
-        } else if (page == '가입하기') {
-            return 'signUp';
-        }
-        else if (page == '로그인') {
-            return 'signIn';
-        } else {
-            return 'notFound';
-        }
-    }
-}
-
-customElements.define('top-bar', TopBar);
-
 // 네비게이션 바 컴포넌트
 class NavBar extends HTMLElement {
     constructor() {
@@ -81,27 +7,77 @@ class NavBar extends HTMLElement {
 
     connectedCallback() {
         const menuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
+        const topMenuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
         const top = JSON.parse(this.getAttribute('top') || 0);
 
         this.shadowRoot.innerHTML = `
                     <style>                    
                         :host {
-                            display: block;
-                        }
-                        .navbar {
+                            display: block;                            
+                        }              
+                        .top-menu {
+                width: 100%;
+  height: 36px;
+background: var(--F5F5F5, #F5F5F5);
+display: flex;
+justify-content: flex-end;
+}
+
+.top-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 48px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.top-menu li {
+  display: flex;
+  align-items: center;
+}
+
+.top-menu a {
+color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px; /* 175% */
+text-decoration: none;
+}
+                .divider {
+                    width: 1px;
+                    height: 12px;
+                    background: var(--111111, #111);
+
+
+                }      
+
+                          @media (max-width: 768px) {
+                            :host {
+                                // display: none;                                
+                            }
+                          }                             
+                        .navbar {                        
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
                             background-color: white;
                             padding: 0 48px;
                             height: 60px;                            
-                            top: ${top}px;
+                            top: 0px;
                             left: 0;
                             right: 0;
                             transition: top 0.3s;
-                            z-index: 1000;     
-                            position: fixed;                                                                 
+                            z-index: 1000;                                                                                        
                         }
+                            .navbar.fixed {
+                                position: fixed;
+                            }    
                         .navbar.hidden {
                             top: -60px;                            
                         }                            
@@ -252,17 +228,18 @@ class NavBar extends HTMLElement {
                             margin-bottom: 15px;
                             text-decoration: none;
                             color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
+                            font-family: "Noto Sans KR";
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 28px; /* 175% */
                         }
                         .additional-link img {
                             width: 20px;
                             height: 20px;
                             margin-right: 12px;
                         }
+
                         @media (max-width: 768px) {
                             .navbar {
                                 top:0px;
@@ -297,6 +274,19 @@ line-height: 28px; /* 175% */
                             }
                         }
                     </style>
+                    
+                   <nav class="top-menu">
+  <ul>
+    <li><a href="../findStore/index.html">매장찾기</a></li>
+    <li class="divider"></li>
+    <li><a href="../customerService/index.html">고객센터</a></li>
+    <li class="divider"></li>
+    <li><a href="../signUp/index.html">가입하기</a></li>
+    <li class="divider"></li>
+    <li><a href="../signIn/index.html">로그인</a></li>
+  </ul>
+</nav>
+                    <div id="navPlaceholder"></div>
                     <nav class="navbar" id="navbar">
                         <a href="../main" class="logo"></a>                      
                         
@@ -366,18 +356,26 @@ line-height: 28px; /* 175% */
 
     setupScrollBehavior() {
         let lastScrollTop = 0;
-        const navbar = this.shadowRoot.getElementById('navbar');
+        const navbar = this.shadowRoot.getElementById('navbar');        
+        const placeholder = this.shadowRoot.getElementById('navPlaceholder');
         const navbarHeight = navbar.offsetHeight;
         const topBarHeight = 36;  // 상단 바의 높이
-
+        
         window.addEventListener('scroll', () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;            
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > topBarHeight) {
+                navbar.classList.add("fixed");
+                placeholder.style.height = "60px";                                           
+            } else {
+                navbar.classList.remove("fixed");
+                placeholder.style.height = '0px';
+            }
 
             if (scrollTop > lastScrollTop && scrollTop > (navbarHeight + topBarHeight)) {
                 navbar.classList.add('hidden');
             } else {
                 navbar.classList.remove('hidden');
-            }            
+            }
             lastScrollTop = scrollTop;
         });
     }

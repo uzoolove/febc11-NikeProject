@@ -1,18 +1,30 @@
+.container {
+    padding: 48px;     
+    height: 100%;    
+}
 
-
-.list-filter {
-    padding: 120px 48px 15px 48px;    
+.list-filter {    
     display: flex;
     justify-content: space-between;
+    padding: 6.96px 0 12.84px;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 100;
 }
 
 .list-filter h2 {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
-    font-size: 18px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: 31.2px; /* 173.333% */
+    transition: all 0.2s;
+}
+
+.list-filter h2.fixed {    
+    font-size: 18px;
 }
 
 .product-controls {
@@ -63,12 +75,18 @@
 }
 
 .list-container {
-    display: flex;                    
-    padding: 0 48px 83px 48px;    
+    display: flex; 
+    height: 100%;
+    padding-top: 15px;                       
 }
 .sidebar {
     width: 240px;
+    height: 100%;
+    overflow: scroll;
+    position: sticky;
+    top: 60px;
     padding-right: 40px;
+    background: white;
 }
 .main-categories {
     padding-bottom: 30px;    
@@ -140,7 +158,7 @@ line-height: 28px; /* 175% */
 }
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);     
     gap: 6px;    
 }
 .product-card {
@@ -191,20 +209,23 @@ line-height: 28px; /* 175% */
 }
 
 @media (max-width: 768px) {
+    .list-filter {
+        position: static;
+    }    
+    .container {
+        padding: 24px;
+    }
     .product-controls {
         display: none;
     }
-
-    .list-filter {
-        padding: 140px 24px 23px 24px;
-    }
+    
     .list-container {
-        flex-direction: column;    
-        padding: 0 24px;    
+        flex-direction: column;            
     }
     .sidebar {
         width: 100%;
-        padding-right: 0;        
+        padding-right: 0;      
+        position: static;  
     }
     .main-categories {
         overflow-x: auto;
