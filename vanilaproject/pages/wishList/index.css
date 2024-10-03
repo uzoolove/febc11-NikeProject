@@ -1,0 +1,135 @@
+.container {
+    padding: 48px;
+}
+
+h1 {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
+}
+
+.wishlist-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+    
+}
+
+.wishlist-button {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--CACACB, #CACACB);
+    background: var(--FFFFFF, #FFF);    
+    color: var(--111111, #111);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+cursor: pointer;
+}
+
+.wishlist-card {
+    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;    
+}
+
+.wishlist-grid {
+    display: flex;  
+    gap: 33.47px;
+    padding-top: 57px;
+}
+
+.wishlist-card img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.product-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;    
+    padding-top: 6.61px;
+}
+
+.product-category h2 {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 150% */
+}
+
+.product-category p {
+    color: var(--111111, #757575);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+}
+
+.product-info p {
+    color: var(--111111, #111);
+text-align: right;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+text-align: left;
+}
+
+.wishlist-grid .wishlist-button {
+    margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 150% */
+    }
+    .container {
+        padding: 24px;
+    }
+    .product-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .wishlist-grid {
+        padding-top: 23.8px;
+        gap: 18px;
+    }
+
+    .product-category h2 {
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 21px; /* 150% */
+    }
+
+    .product-category p {
+        color: var(--111111, #757575);
+font-family: "Noto Sans KR";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 21px;
+    }
+}

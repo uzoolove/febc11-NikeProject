@@ -6,10 +6,7 @@ class NavBar extends HTMLElement {
     }
 
     connectedCallback() {
-        const menuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
-        const topMenuItems = JSON.parse(this.getAttribute('menu-items') || '[]');
-        const top = JSON.parse(this.getAttribute('top') || 0);
-
+        const menuItems = JSON.parse(this.getAttribute('menu-items') || '[]');                
         this.shadowRoot.innerHTML = `
                     <style>                    
                         :host {
@@ -241,8 +238,12 @@ text-decoration: none;
                         }
 
                         @media (max-width: 768px) {
+                        .top-menu {
+                        display: none;
+                        }
                             .navbar {
                                 top:0px;
+                                position: fixed;
                                 padding: 0 24px;
                             }
                             .menu-list, .search-box {
@@ -300,12 +301,11 @@ text-decoration: none;
                                 </span>
                                 <input type="text" placeholder="검색">
                             </div>
-                            <span class="extra-icon"><img src="../../assets/search.svg"/></span>
-                            <span class="extra-icon"><img src="../../assets/user.svg"/></span>
-                              <span class="extra-icon"><img src="../../assets/shop.svg"/></span>
-                            <span class="extra-icon"><img src="../../assets/heart.svg"/></span>
-                              <span class="extra-icon"><img src="../../assets/shop.svg"/></span>
-                            
+                            <a class="extra-icon"><img src="../../assets/search.svg"/></a>
+                            <a class="extra-icon"><img src="../../assets/user.svg"/></a>
+                              <a class="extra-icon"><img src="../../assets/shop.svg"/></a>
+                            <a href="../wishList/index.html" class="extra-icon"><img src="../../assets/heart.svg"/></a>
+                              <a href="../myCart/index.html" class="extra-icon"><img src="../../assets/shop.svg"/></a>                            
                             <span class="hamburger" id="hamburger">
                                 <img src="../../assets/hambuger.svg"/>
                             </span>
@@ -352,6 +352,22 @@ text-decoration: none;
 
         this.setupScrollBehavior();
         this.setupSideMenu();
+        this.setupNavBarLayout();
+    }
+
+    setupNavBarLayout() {
+        const placeholder = this.shadowRoot.getElementById('navPlaceholder');
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                placeholder.style.height = "60px";      
+            }
+        });
+
+        window.addEventListener('load', () => {
+            if (window.innerWidth <= 768) {
+                placeholder.style.height = "60px";      
+            }
+        });
     }
 
     setupScrollBehavior() {
@@ -361,12 +377,15 @@ text-decoration: none;
         const navbarHeight = navbar.offsetHeight;
         const topBarHeight = 36;  // 상단 바의 높이
         
+       
+
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > topBarHeight) {
+            
+            if (scrollTop > topBarHeight && window.innerWidth > 768) {
                 navbar.classList.add("fixed");
                 placeholder.style.height = "60px";                                           
-            } else {
+            } else if (window.innerWidth > 768) {
                 navbar.classList.remove("fixed");
                 placeholder.style.height = '0px';
             }

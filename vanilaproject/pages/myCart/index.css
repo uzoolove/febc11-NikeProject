@@ -1,0 +1,448 @@
+
+.container {
+    padding-top: 40px;
+    padding-bottom: 104px;
+    padding: 40px 24px 104px 24px;
+}
+.cart {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1099.99px;
+    margin:  0 auto;    
+    gap: 16px;
+}
+
+.cart-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; /* 150% */
+}
+
+.cart-result {
+    color: var(--707072, #707072);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+display: none;
+padding-bottom: 30px;
+border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
+}
+
+.cart-section {
+    padding-bottom: 104.09px;
+    background: rgba(255, 255, 255, 0.00);
+box-shadow: 0px 0px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset, 0px -1px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset;
+}
+
+.cart-result b {
+    color: var(--111111, #111);
+}
+
+.order-section {
+    width: 334.7px;
+}
+h2 {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px; /* 150% */
+}
+.product {
+    padding-top: 24px;     
+}
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+.product-image {        
+    padding-right: 16px;    
+    flex: 0.3;
+}
+
+.product-image img {
+    width: 100%;
+    min-width: 154px;
+}
+.product-details {
+    flex-grow: 1;
+}
+.product-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.product-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+}
+.product-price {
+    color: var(--111111, #111);
+    text-align: right;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+}
+.product-option, .product-quantity {
+ color: var(--707072, #707072);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+
+.product-actions span {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.delivery-info h1 {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */      
+}
+
+.delivery-info p {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+}
+
+.delivery-info a {
+    color: var(--111111, #111);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+text-decoration: underline;
+}
+.order-summary {        
+    margin-top: 24px;
+}
+.order-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    padding: 16.615px 0px 16.865px 0px;
+    border-top: 0.75px solid var(--E5E5E5, #E5E5E5);
+    border-bottom: 0.75px solid var(--E5E5E5, #E5E5E5);
+}
+
+.order-row span {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+.order-row span b {
+    font-weight: 500;
+}
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.order-button {
+    color: var(--FFFFFF, #FFF);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 175% */
+    padding: 17.875px 0px 18.105px 0px;
+    border-radius: 999px;
+    background: var(--111111, #111);
+    width: 100%;
+    border: none;
+    margin-top: 31.98px;
+}
+
+.wishlist {
+    max-width: 1099.99px;
+    margin: 0 auto;
+    padding: 24px 0;
+    background: rgba(255, 255, 255, 0.00);
+    box-shadow: 0px 0px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset, 0px -1px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset;
+}
+.show-wishlist {
+    max-width: 1099.99px;
+    margin: 0 auto;
+    padding: 15px 0;
+    color: var(--707072, #707072);
+font-family: "Noto Sans KR";
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 24.5px; /* 175% */
+}
+.rec-container {
+    max-width: 1200px;
+    margin: 0 auto;    
+}
+
+.rec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.rec-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    /* 150% */
+}
+
+.rec-slide-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.rec-slide-button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+.rec-item-gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.rec-item-card {
+    flex: 0 33% auto;
+}
+
+.rec-item-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.rec-item-title {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+    padding-top: 12px;
+}
+
+.rec-item-category {
+    color: var(--111111, #707072);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.rec-item-price {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    /* 175% */
+    padding-top: 12px;
+}
+
+.wishlist-section {
+    display: flex;
+    gap: 16px;
+    padding-top: 24px;
+}
+
+.wishlist-card {
+    flex: 0.5;    
+    display: flex;    
+    gap: 16px;
+}
+
+.wishlist-card img {
+    width: 154px;
+    height: 154px;
+}
+
+.wishlist-product {
+    color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+}
+
+.wishlist-category {
+    color: var(--707072, #707072);
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+
+.wishlist-button {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--CACACB, #CACACB);
+    background: var(--FFFFFF, #FFF);    
+    color: var(--111111, #111);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+cursor: pointer;
+margin-top: 12px;
+}
+
+.search-bar {
+    margin: 0 24px;
+    padding: 6px;
+    border-radius: 30px;
+    background: var(--F5F5F5, #F5F5F5);
+    display: flex;
+    gap: 7px;
+    display: none;
+}
+
+.search-bar input {    
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+border: none;
+background: var(--F5F5F5, #F5F5F5);
+width: 100%;
+text-align: left;
+}
+
+@media (max-width: 768px) { 
+    .container {
+        padding-top: 56px;
+        padding-bottom: 35px;
+    }
+    h2 {
+        color: var(--111111, #111);
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
+    }
+    .cart {
+        flex-direction: column;
+        gap: 0;
+    }  
+
+    .rec-title {
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
+        /* 150% */
+    }
+
+    .rec-item-card {
+        flex: 0 0 auto;
+        max-width: 80%;
+    }
+
+    .product-title-price {
+        flex-direction: column-reverse;
+    }
+
+    .cart-title {
+        color: var(--111111, #111);
+text-align: center;
+font-family: "Noto Sans KR";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px; /* 150% */
+    }
+    
+    .cart-result {
+        display: block;        
+    }
+
+    .product {
+        padding: 40px 0px;        
+    }
+
+    .order-section {
+        padding: 40px 0;               
+    }
+
+    .total {
+        border: none;
+    }
+
+    .order-button {
+        display: none;
+    }
+    .order-section {
+        width: 100%;
+        border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
+    }
+
+    .wishlist-section {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .wishlist {
+        padding: 40px 0;        
+    }
+
+    .search-bar {
+        display: flex;
+    }
+}

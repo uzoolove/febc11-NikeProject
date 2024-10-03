@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 페이지</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="./index.css">
+    <script src="../../components/header/index.js"></script>
+    <script src="../../components/footer/index.js"></script>
+</head>
+<body>
+    <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+    <div class="search-bar">
+        <img src="../../assets/search.svg"/>
+        <input type="text" placeholder="검색"/>
+    </div>
+    <div class="container">
+    <div class="cart">
+    <div class="cart-section">
+        <h2 class="cart-title">장바구니</h2>
+        <h3 class="cart-result">1개의 제품 | <b>189,000 원</b></h3>
+        <div class="product">
+            <div class="product-header">
+                <div class="product-image">
+                    <img src="../../assets/product.png"/>
+                </div>
+                <div class="product-details">
+                    <div class="product-title-price">
+                        <div class="product-title">나이키 줌 베이퍼 5</div>
+                        <div class="product-price">189,000 원</div>
+                    </div>
+                    <div class="product-option">남성 신발</div>
+                    <div class="product-option">포른 티스트/그린듀와연/새벽/크롬</div>
+                    <div class="product-quantity">사이즈: 275 • 수량 — 1 +</div>
+                    <div class="product-actions">
+                        <span><img src="../../assets/heart.svg"/></span>
+                        <span><img src="../../assets/trash.svg"/></span>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-info">
+               <h1>무료 배송</h1>
+               <p>도착 예정일: 7월 26일 (금) <a>지역 수정</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="order-section">
+        <h2>주문 내역</h2>
+        <div class="order-summary">
+            <div class="order-row">
+                <span>상품 금액</span>
+                <span>189,000 원</span>
+            </div>
+            <div class="order-row">
+                <span>배송비</span>
+                <span>무료</span>
+            </div>
+            <div class="order-row total">
+                <span class="total-price">총 결제 금액</span>
+                <span class="total-price"><b>189,000 원</b></span>
+            </div>
+        </div>
+        <button class="order-button">주문결제</button>
+    </div>
+</div>
+
+<!-- 위시리스트 -->
+ <div class="wishlist">
+    <h2>위시리스트</h2>
+    <div class="wishlist-section">
+       <div class="wishlist-card">
+        <img src="../../assets/product.png"/>
+        <div class="wishlist-card-info">
+            <p class="wishlist-product">나이키 줌 보메로</p>
+            <p class="wishlist-category">남성 신발 <br/> 사이즈 275</p>
+            <button class="wishlist-button">장바구니에 추가</button>
+        </div>
+       </div>
+
+       <div class="wishlist-card">
+        <img src="../../assets/product.png"/>
+        <div class="wishlist-card-info">
+            <p class="wishlist-product">나이키 줌 보메로</p>
+            <p class="wishlist-category">남성 신발 <br/> 사이즈 275</p>
+            <button class="wishlist-button">장바구니에 추가</button>
+        </div>
+       </div>
+    </div>    
+ </div>
+
+ <p class="show-wishlist">위시리스트 상품 모두 보기</p>
+<!-- 추천 제품 -->
+<div class="rec-container">
+    <div class="rec-header">
+        <h2 class="rec-title">추천 제품</h2>
+        <div class="rec-slide-buttons">
+            <button class="rec-slide-button">
+                <img src="../../assets/left.svg" />
+            </button>
+            <button class="rec-slide-button">
+                <img src="../../assets/right.svg" />
+            </button>
+        </div>
+    </div>
+    <div class="rec-item-gallery">
+        <div class="rec-item-card">
+            <img src="../../assets/product.png" alt="나이키 운동화 1" class="rec-item-image">
+            <h3 class="rec-item-title">나이키 운동화 1</h3>
+            <p class="rec-item-category">남성 신발</p>
+            <p class="rec-item-price">138,000 원</p>
+        </div>
+        <div class="rec-item-card">
+            <img src="../../assets/product.png" alt="나이키 운동화 1" class="rec-item-image">
+            <h3 class="rec-item-title">나이키 모자</h3>
+            <p class="rec-item-category">남성 신발</p>
+            <p class="rec-item-price">35,000 원</p>
+        </div>
+        <div class="rec-item-card">
+            <img src="../../assets/product.png" alt="나이키 운동화 1" class="rec-item-image">
+            <h3 class="rec-item-title">나이키 운동화 2</h3>
+            <p class="rec-item-category">남성 신발</p>
+            <p class="rec-item-price">139,000 원</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<nike-footer></nike-footer>
+</body>
+</html>
