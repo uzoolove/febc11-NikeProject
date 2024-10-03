@@ -1,5 +1,6 @@
 /* 컨테이너 속성 */
 body {
+    max-width: 100%;
     overflow-x: hidden;
 }
 
