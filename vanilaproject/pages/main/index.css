@@ -3,12 +3,16 @@ body {
     overflow-x: hidden;
 }
 
+.divider {        
+    height: 1px;
+    background: var(--E5E5E5, #E5E5E5);
+    display: none;
+}
 .container {
     padding: 48px;
     display: flex;
     flex-direction: column;
-    gap: 84px;
-    margin-top: 60px;
+    gap: 84px;    
 }
 section h1 {
     color: var(--111111, #111);
@@ -20,6 +24,9 @@ section h1 {
 }
 
 @media (max-width: 768px) {
+    .divider {
+        display: block;
+    }
     .container {
         padding: 24px;
     }
@@ -223,6 +230,7 @@ section h1 {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    align-items: flex-start;
 }
 .card-title {
     color: var(--FFFFFF, #FFF);
@@ -376,6 +384,8 @@ section h1 {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    width: 100vw;
+    margin-left: -48px;
 }
 .slide {
     flex: 0 0 auto;
@@ -415,6 +425,7 @@ section h1 {
     .slider {
         overflow-x: auto;
         width: 100vw;
+        margin-left: 0;
     }
     .slider-button {
         display: none;

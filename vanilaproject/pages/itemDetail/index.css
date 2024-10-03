@@ -389,7 +389,7 @@
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        margin-top: 80px;
+        margin-top: 60px;
     }
 
     .product-title {
