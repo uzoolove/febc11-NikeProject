@@ -257,12 +257,15 @@ section h1 {
 }
 
 @media (max-width: 768px) {
-    .card-container {
-        overflow-x: auto;
+    .card-container {        
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        padding-right: 20px;        
+        padding-right: 20px;                
         width: 100vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* iOS 스무스 스크롤 */
     }
     .card {
         width: 80%;
@@ -426,6 +429,10 @@ section h1 {
     .slider {
         overflow-x: auto;
         width: 100vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* iOS 스무스 스크롤 */
         margin-left: 0;
     }
     .slider-button {
