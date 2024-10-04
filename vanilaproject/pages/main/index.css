@@ -271,6 +271,7 @@ section h1 {
         width: 80%;
         scroll-snap-align: start;
         flex-direction: column;
+        display: inline-block;
     }
     .card-title {
         color: var(--111111, #111);
