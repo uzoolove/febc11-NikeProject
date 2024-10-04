@@ -168,10 +168,11 @@ text-decoration: none;
                         }
                         .auth-buttons {
                             display: flex;
-                            justify-content: center;
+                            justify-content: flex-start;
                             gap: 20px;
-                            margin-top: 30px;
+                            margin-top: 84px;
                             margin-bottom: 40px;  
+                            margin-left: 20px;
                             width: 100%;                          
                         }
                         .auth-button {
@@ -334,7 +335,7 @@ text-decoration: none;
                                 <img src="../../assets/help.svg" alt="고객센터">
                                 고객센터
                             </a>
-                            <a href="#" class="additional-link">
+                            <a href="../myCart" class="additional-link">
                                 <img src="../../assets/shop.svg" alt="장바구니">
                                 장바구니
                             </a>
