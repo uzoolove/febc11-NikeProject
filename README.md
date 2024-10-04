@@ -1,5 +1,8 @@
 # 바닐라프로젝트 샘플코드
 
+### 링크
+[나이키 샘플사이트](https://seokki2222.github.io/NikeProject/vanilaproject/pages/main/index.html)
+
 ## 폴더 구조
 
 ```
