@@ -11,6 +11,7 @@
 </head>
 <body>
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+    <button class="shopping-cart-button">주문하기</button>
     <div class="search-bar">
         <img src="../../assets/search.svg"/>
         <input type="text" placeholder="검색"/>
@@ -49,7 +50,10 @@
         <h2>주문 내역</h2>
         <div class="order-summary">
             <div class="order-row">
-                <span>상품 금액</span>
+                <div style="display: flex; gap: 7.6px;">
+                    <span>상품 금액</span>
+                    <img src="../../assets/question.svg"/>
+                </div>
                 <span>189,000 원</span>
             </div>
             <div class="order-row">

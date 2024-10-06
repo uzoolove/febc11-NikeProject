@@ -145,7 +145,7 @@ text-decoration: none;
                             position: fixed;
                             top: 0;
                             right: -100%;
-                            width: 70%;
+                            width: 310px;
                             height: 100%;
                             background-color: white;
                             transition: right 0.3s ease;
@@ -172,8 +172,7 @@ text-decoration: none;
                             gap: 20px;
                             margin-top: 84px;
                             margin-bottom: 40px;  
-                            margin-left: 20px;
-                            width: 100%;                          
+                            margin-left: 20px;                                            
                         }
                         .auth-button {
                             padding: 6px 16px;
@@ -312,6 +311,7 @@ text-decoration: none;
                             </span>
                         </div>
                     </nav>
+                   <div>
                    <div class="side-menu" id="sideMenu">
                         <button class="close-btn" id="closeBtn">
                             <img src="../../assets/closeButton.svg"/>
@@ -349,6 +349,7 @@ text-decoration: none;
                             </a>
                         </div>
                     </div>
+                   </div>
                 `;
 
         this.setupScrollBehavior();
