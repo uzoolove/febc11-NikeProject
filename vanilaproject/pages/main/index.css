@@ -261,7 +261,7 @@ section h1 {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         margin-right: 20px;                
-        width: 100vw;
+        width: calc(100% + 24px);
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
@@ -427,9 +427,12 @@ section h1 {
 }
 
 @media (max-width: 768px) {
+    .nav-button {
+        display: none;
+    }
     .slider {
         overflow-x: auto;
-        width: 100vw;
+        width: calc(100% + 24px);
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
@@ -609,6 +612,7 @@ section h1 {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         padding-bottom: 20px;
+        width: calc(100% + 24px);
     }
     .membership-card {
         flex: 0 0 80%;
@@ -616,5 +620,10 @@ section h1 {
     }
     .membership-card:last-child {
         margin-right: 20px;
+    }
+
+    .membership-card img {
+        min-height: 375px;
+        object-fit: cover;
     }
 }
