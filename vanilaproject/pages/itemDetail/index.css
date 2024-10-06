@@ -423,7 +423,8 @@
     }
 
     .product-images {
-        width: 100vw;
+        width: calc(100% + 48px);    
+        margin-left: -24px;    
         position: static;
         height: auto;
         flex-direction: column;
@@ -432,8 +433,7 @@
     .main-image-container {
         order: -1;
         border-radius: 0;
-        padding-top: 24px;
-        margin-left: -24px;
+        padding-top: 24px;       
     }
 
     .thumbnail-list {
