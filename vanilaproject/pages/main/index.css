@@ -1,7 +1,7 @@
 /* 컨테이너 속성 */
 body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .divider {        
@@ -262,7 +262,7 @@ section h1 {
         -webkit-overflow-scrolling: touch;
         margin-right: 20px;                
         width: calc(100% + 24px);
-        overflow-x: auto;
+        overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
         -webkit-overflow-scrolling: touch; /* iOS 스무스 스크롤 */
