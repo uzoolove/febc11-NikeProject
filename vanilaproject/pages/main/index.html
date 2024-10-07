@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,9 +12,10 @@
 </head>
 
 <body>
-    <!-- 네비게이션 바 컴포넌트 사용 -->
+    <!-- 네비게이션 바 컴포넌트 -->
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
 
+    <!-- 컨텐츠 시작 -->
     <div class="container">
         <!-- 메인배너 -->
         <div class="main-banner">
@@ -113,8 +115,8 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
         <!-- Featured -->
         <section>
             <h1 style="margin-bottom: 24px;">Featured</h1>
@@ -235,28 +237,10 @@
             </div>
         </section>
     </div>
+    <!-- 컨텐츠 끝 -->
 
-    <nike-footer></nike-footer>
-    <script>
-        const slider = document.getElementById('slider');
-        const slides = document.querySelectorAll('.slide');
-        let currentIndex = 0;
-
-        function slide(direction) {
-            currentIndex = (currentIndex + direction + slides.length) % slides.length;
-            updateSlider();
-        }
-
-        function updateSlider() {
-            slider.scrollTo({
-                left: slides[currentIndex].offsetLeft,
-                behavior: 'smooth'
-            });
-        }
-
-        // 윈도우 리사이즈 시 슬라이더 위치 조정
-        window.addEventListener('resize', updateSlider);
-    </script>
+    <!-- 푸터 -->
+    <nike-footer></nike-footer>    
 </body>
 
 </html>

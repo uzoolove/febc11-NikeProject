@@ -1,14 +1,71 @@
-
+/* 공통속성 */
 .container {
     padding-top: 40px;
     padding-bottom: 104px;
     padding: 40px 24px 104px 24px;
 }
+
+h2 {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    /* 150% */
+}
+
+/* 검색바(모바일) */
+.search-bar {
+    margin: 0 24px;
+    padding: 6px;
+    border-radius: 30px;
+    background: var(--F5F5F5, #F5F5F5);
+    display: flex;
+    gap: 7px;
+    display: none;
+}
+
+.search-bar input {
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    border: none;
+    background: var(--F5F5F5, #F5F5F5);
+    width: 100%;
+    text-align: left;
+}
+
+/* 주문하기 버튼(모바일) */
+.shopping-cart-button {
+    display: none;
+    color: var(--FFFFFF, #FFF);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    width: 100%;
+    height: 67px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--111111, #111);
+    border: none;
+    cursor: pointer;
+}
+
+/* 장바구니 & 주문내역 */
 .cart {
     display: flex;
     justify-content: space-between;
     max-width: 1099.99px;
-    margin:  0 auto;    
+    margin: 0 auto;
     gap: 16px;
 }
 
@@ -18,54 +75,46 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48px; /* 150% */
+    line-height: 48px;
 }
 
 .cart-result {
     color: var(--707072, #707072);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-display: none;
-padding-bottom: 30px;
-border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    display: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
 }
 
 .cart-section {
     padding-bottom: 104.09px;
     background: rgba(255, 255, 255, 0.00);
-box-shadow: 0px 0px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset, 0px -1px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset;
+    box-shadow: 0px 0px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset, 0px -1px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset;
 }
 
 .cart-result b {
     color: var(--111111, #111);
 }
 
-.order-section {
-    width: 334.7px;
-}
-h2 {
-    color: var(--111111, #111);
-    font-family: "Noto Sans KR";
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 48px; /* 150% */
-}
+/* 장바구니 */
 .product {
-    padding-top: 24px;     
+    padding-top: 24px;
 }
+
 .product-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 10px;
 }
-.product-image {        
-    padding-right: 16px;    
+
+.product-image {
+    padding-right: 16px;
     flex: 0.3;
 }
 
@@ -73,22 +122,26 @@ h2 {
     width: 100%;
     min-width: 154px;
 }
+
 .product-details {
     flex-grow: 1;
 }
+
 .product-title-price {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .product-title {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */
+    line-height: 28px;
 }
+
 .product-price {
     color: var(--111111, #111);
     text-align: right;
@@ -96,15 +149,17 @@ h2 {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */
+    line-height: 28px;
 }
-.product-option, .product-quantity {
- color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
+
+.product-option,
+.product-quantity {
+    color: var(--707072, #707072);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 .product-actions span {
@@ -118,31 +173,38 @@ line-height: 28px; /* 175% */
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */      
+    line-height: 28px;
 }
 
 .delivery-info p {
     color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
 }
 
 .delivery-info a {
     color: var(--111111, #111);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-text-decoration: underline;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    text-decoration: underline;
 }
-.order-summary {        
+
+/* 주문 내역 */
+.order-section {
+    width: 334.7px;
+}
+
+.order-summary {
     margin-top: 24px;
 }
+
 .order-row {
     display: flex;
     justify-content: space-between;
@@ -157,19 +219,22 @@ text-decoration: underline;
 
 .order-row span {
     color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
 }
+
 .order-row span b {
     font-weight: 500;
 }
+
 .total {
     font-weight: bold;
     margin-top: 10px;
 }
+
 .order-button {
     color: var(--FFFFFF, #FFF);
     text-align: center;
@@ -177,7 +242,7 @@ line-height: 28px; /* 175% */
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */
+    line-height: 28px;
     padding: 17.875px 0px 18.105px 0px;
     border-radius: 999px;
     background: var(--111111, #111);
@@ -186,6 +251,7 @@ line-height: 28px; /* 175% */
     margin-top: 31.98px;
 }
 
+/* 위시리스트 */
 .wishlist {
     max-width: 1099.99px;
     margin: 0 auto;
@@ -193,20 +259,74 @@ line-height: 28px; /* 175% */
     background: rgba(255, 255, 255, 0.00);
     box-shadow: 0px 0px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset, 0px -1px 0px 0px #E5E5E5 inset, 0px 0px 0px 0px #E5E5E5 inset;
 }
+
 .show-wishlist {
     max-width: 1099.99px;
     margin: 0 auto;
     padding: 15px 0;
     color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 24.5px; /* 175% */
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24.5px;
 }
+
+.wishlist-section {
+    display: flex;
+    gap: 16px;
+    padding-top: 24px;
+}
+
+.wishlist-card {
+    flex: 0.5;
+    display: flex;
+    gap: 16px;
+}
+
+.wishlist-card img {
+    width: 154px;
+    height: 154px;
+}
+
+.wishlist-product {
+    color: var(--111111, #111);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.wishlist-category {
+    color: var(--707072, #707072);
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.wishlist-button {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--CACACB, #CACACB);
+    background: var(--FFFFFF, #FFF);
+    color: var(--111111, #111);
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+/* 추천제품 */
 .rec-container {
     max-width: 1200px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
 .rec-header {
@@ -223,7 +343,6 @@ line-height: 24.5px; /* 175% */
     font-style: normal;
     font-weight: 500;
     line-height: 48px;
-    /* 150% */
 }
 
 .rec-slide-buttons {
@@ -264,7 +383,6 @@ line-height: 24.5px; /* 175% */
     font-style: normal;
     font-weight: 500;
     line-height: 28px;
-    /* 175% */
     padding-top: 12px;
 }
 
@@ -284,136 +402,44 @@ line-height: 24.5px; /* 175% */
     font-style: normal;
     font-weight: 500;
     line-height: 28px;
-    /* 175% */
     padding-top: 12px;
 }
 
-.wishlist-section {
-    display: flex;
-    gap: 16px;
-    padding-top: 24px;
-}
+@media (max-width: 768px) {
 
-.wishlist-card {
-    flex: 0.5;    
-    display: flex;    
-    gap: 16px;
-}
-
-.wishlist-card img {
-    width: 154px;
-    height: 154px;
-}
-
-.wishlist-product {
-    color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-}
-
-.wishlist-category {
-    color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-}
-
-.wishlist-button {
-    padding: 6px 16px;
-    border-radius: 999px;
-    border: 1px solid var(--CACACB, #CACACB);
-    background: var(--FFFFFF, #FFF);    
-    color: var(--111111, #111);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-cursor: pointer;
-margin-top: 12px;
-}
-
-.search-bar {
-    margin: 0 24px;
-    padding: 6px;
-    border-radius: 30px;
-    background: var(--F5F5F5, #F5F5F5);
-    display: flex;
-    gap: 7px;
-    display: none;
-}
-
-.search-bar input {    
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-border: none;
-background: var(--F5F5F5, #F5F5F5);
-width: 100%;
-text-align: left;
-}
-
-.shopping-cart-button {
-    display: none;
-    color: var(--FFFFFF, #FFF);
-    text-align: center;
-    font-family: "Noto Sans KR";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px;
-    /* 175% */
-    width: 100%;
-    height: 67px;
-    z-index: 100;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background: var(--111111, #111);
-    border: none;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) { 
+    /* 공통속성 */
     .container {
         padding-top: 56px;
         padding-bottom: 35px;
     }
-    h2 {
-        color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px; /* 150% */
-    }
-    .cart {
-        flex-direction: column;
-        gap: 0;
-    }  
 
-    .rec-title {
+    h2 {
         color: var(--111111, #111);
         font-family: "Noto Sans KR";
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
         line-height: 36px;
-        /* 150% */
     }
 
-    .rec-item-card {
-        flex: 0 0 auto;
-        max-width: 80%;
+    /* 주문하기 버튼 */
+    .shopping-cart-button {
+        display: block;
+    }
+
+    /* 검색바 */
+    .search-bar {
+        display: flex;
+    }
+
+    /* 장바구니 & 주문 내역 */
+    .cart {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cart-section {
+        padding: 0;
     }
 
     .product-title-price {
@@ -422,56 +448,59 @@ line-height: 36px; /* 150% */
 
     .cart-title {
         color: var(--111111, #111);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px; /* 150% */
+        text-align: center;
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
     }
-    
+
     .cart-result {
-        display: block;        
+        display: block;
     }
 
     .product {
-        padding: 40px 0px;        
+        padding: 40px 0px;
+    }
+
+    /* 주문 내역 */
+    .order-button {
+        display: none;
     }
 
     .order-section {
-        padding: 40px 0;               
+        width: 100%;
+        border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
+        padding: 40px 0;
     }
 
     .total {
         border: none;
     }
 
-    .order-button {
-        display: none;
-    }
-    .order-section {
-        width: 100%;
-        border-bottom: 1px solid var(--E5E5E5, #E5E5E5);
-    }
-
+    /* 위시리스트 */
     .wishlist-section {
         flex-direction: column;
         gap: 48px;
     }
 
     .wishlist {
-        padding: 40px 0;        
+        padding: 40px 0;
     }
 
-    .search-bar {
-        display: flex;
+    /* 추천제품 */
+    .rec-title {
+        color: var(--111111, #111);
+        font-family: "Noto Sans KR";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px;
     }
 
-    .cart-section {
-        padding: 0;
-    }
-
-    .shopping-cart-button {
-        display: block;
+    .rec-item-card {
+        flex: 0 0 auto;
+        max-width: 80%;
     }
 }

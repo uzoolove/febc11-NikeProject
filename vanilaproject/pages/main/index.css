@@ -1,20 +1,23 @@
-/* 컨테이너 속성 */
+
+/* 공통 속성 */
 body {
     max-width: 100%;
     overflow-x: hidden !important;
 }
 
-.divider {        
+.divider {
     height: 1px;
     background: var(--E5E5E5, #E5E5E5);
     display: none;
 }
+
 .container {
     padding: 48px;
     display: flex;
     flex-direction: column;
-    gap: 84px;    
+    gap: 84px;
 }
+
 section h1 {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
@@ -28,9 +31,11 @@ section h1 {
     .divider {
         display: block;
     }
+
     .container {
         padding: 24px;
     }
+
     section h1 {
         color: var(--111111, #111);
         font-family: "Noto Sans KR";
@@ -47,16 +52,19 @@ section h1 {
     width: 100%;
     margin: 0 auto;
 }
+
 .banner-image {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
+
 .banner-content {
     text-align: center;
     background-color: white;
 }
+
 .banner-content>h1 {
     padding-top: 36px;
     color: var(--111111, #111);
@@ -67,6 +75,7 @@ section h1 {
     line-height: 72px;
     text-transform: uppercase;
 }
+
 .banner-content h2 {
     color: var(--111111, #111);
     text-align: center;
@@ -78,6 +87,7 @@ section h1 {
     padding-top: 36px;
     margin-bottom: -28px;
 }
+
 .banner-content>p {
     padding-top: 8px;
     color: var(--111111, #111);
@@ -87,6 +97,7 @@ section h1 {
     font-weight: 400;
     line-height: 28px;
 }
+
 .banner-content>a {
     padding: 6px 15.68px 6px 16px;
     color: var(--FFFFFF, #FFF);
@@ -97,17 +108,20 @@ section h1 {
     font-weight: 500;
     line-height: 28px;
 }
+
 .banner-title {
     font-size: 36px;
     color: #111;
     margin-bottom: 10px;
     font-weight: bold;
 }
+
 .banner-subtitle {
     font-size: 18px;
     color: #555;
     margin-bottom: 20px;
 }
+
 .cta-button {
     background-color: black;
     color: white;
@@ -124,18 +138,22 @@ section h1 {
     .banner-title {
         font-size: 24px;
     }
+
     .banner-subtitle {
         font-size: 14px;
     }
+
     .cta-button {
         padding: 10px 20px;
         font-size: 14px;
     }
+
     .banner-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
+
     .banner-content>h1 {
         padding-top: 24px;
         color: var(--111111, #111);
@@ -147,10 +165,12 @@ section h1 {
         text-transform: uppercase;
         text-align: left;
     }
+
     .banner-content h2 {
         padding-top: 24px;
         margin-bottom: 0px;
     }
+
     .banner-content>p {
         padding-top: 24px;
         color: var(--111111, #111);
@@ -161,6 +181,7 @@ section h1 {
         line-height: 28px;
         text-align: left;
     }
+
     .main-banner img {
         min-height: 457px;
     }
@@ -174,6 +195,7 @@ section h1 {
     align-items: center;
     margin-bottom: 30px;
 }
+
 .header span {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
@@ -182,11 +204,13 @@ section h1 {
     font-weight: 500;
     line-height: 28px;
 }
+
 .navigation {
     display: flex;
     gap: 10px;
     align-items: center;
 }
+
 .nav-button {
     width: 48px;
     height: 48px;
@@ -201,28 +225,34 @@ section h1 {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .left {
     background-image: url(../../assets/left.svg);
 }
+
 .right {
     background-image: url(../../assets/right.svg);
 }
+
 .card-container {
     display: flex;
     justify-content: space-between;
     gap: 12px;
 }
+
 .card {
     position: relative;
     flex: 0 0 auto;
     width: calc(33.333% - 14px);
     background-color: white;
 }
+
 .card-image {
     width: 100%;
     height: auto;
-    object-fit: cover;    
+    object-fit: cover;
 }
+
 .card-content {
     bottom: 48px;
     left: 48px;
@@ -233,6 +263,7 @@ section h1 {
     gap: 24px;
     align-items: flex-start;
 }
+
 .card-title {
     color: var(--FFFFFF, #FFF);
     font-family: "Noto Sans KR";
@@ -241,6 +272,7 @@ section h1 {
     font-weight: 500;
     line-height: 36px;
 }
+
 .card-button {
     display: inline-block;
     padding: 6px 16px;
@@ -257,22 +289,24 @@ section h1 {
 }
 
 @media (max-width: 768px) {
-    .card-container {        
+    .card-container {
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        margin-right: 20px;                
+        margin-right: 20px;
         width: calc(100% + 24px);
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch; /* iOS 스무스 스크롤 */
+        -webkit-overflow-scrolling: touch;        
     }
+
     .card {
         width: 80%;
         scroll-snap-align: start;
         flex-direction: column;
         display: inline-block;
     }
+
     .card-title {
         color: var(--111111, #111);
         font-family: "Noto Sans KR";
@@ -281,9 +315,11 @@ section h1 {
         font-weight: 500;
         line-height: 35px;
     }
+
     .card-image {
-        min-height: 375px;        
+        min-height: 375px;
     }
+
     .card-button {
         background-color: #111;
         color: var(--FFFFFF, #FFF);
@@ -294,10 +330,12 @@ section h1 {
         font-weight: 500;
         line-height: 28px;
     }
+
     .card-content {
         position: static;
         align-items: flex-start;
     }
+
     .card:last-child {
         margin-right: 20px;
     }
@@ -310,15 +348,18 @@ section h1 {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+
 .featured-item {
     position: relative;
     overflow: hidden;
 }
+
 .featured-item img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .featured-button {
     position: absolute;
     bottom: 48px;
@@ -344,10 +385,12 @@ section h1 {
     .featured-grid {
         grid-template-columns: 1fr;
     }
+
     .featured-item {
         display: flex;
         flex-direction: column;
     }
+
     .featured-button {
         position: static;
         margin-top: 24px;
@@ -362,6 +405,7 @@ section h1 {
         background: #fff;
         padding: 0;
     }
+
     .featured-grid .featured-button:nth-last-of-type(1) {
         display: block;
         color: var(--FFFFFF, #FFF);
@@ -383,6 +427,7 @@ section h1 {
 .slider-container {
     position: relative;
 }
+
 .slider {
     display: flex;
     overflow-x: hidden;
@@ -392,20 +437,24 @@ section h1 {
     width: 100vw;
     margin-left: -48px;
 }
+
 .slide {
     flex: 0 0 auto;
     margin-right: 16px;
     scroll-snap-align: start;
 }
+
 .slide img {
     width: 100%;
     height: auto;
 }
+
 .slide-title {
     margin-top: 10px;
     font-size: 18px;
     text-align: center;
 }
+
 .slider-button {
     position: absolute;
     top: 50%;
@@ -419,9 +468,11 @@ section h1 {
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .slider-button.prev {
     left: 52px;
 }
+
 .slider-button.next {
     right: 52px;
 }
@@ -430,24 +481,29 @@ section h1 {
     .nav-button {
         display: none;
     }
+
     .slider {
         overflow-x: auto;
         width: calc(100% + 24px);
         overflow-x: auto;
         overflow-y: hidden;
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch; /* iOS 스무스 스크롤 */
+        -webkit-overflow-scrolling: touch;        
         margin-left: 0;
     }
+
     .slider-button {
         display: none;
     }
+
     .slide:last-child {
         margin-right: 20px;
     }
+
     .slide {
         width: 80%;
     }
+
     .slide img {
         width: 100%;
     }
@@ -460,11 +516,13 @@ section h1 {
     justify-content: space-between;
     gap: 20px;
 }
+
 .sport-card {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
+
 .sport-card img {
     width: 100%;
     height: auto;
@@ -472,6 +530,7 @@ section h1 {
     margin-bottom: 15px;
     object-fit: cover;
 }
+
 .sport-card-title {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
@@ -480,6 +539,7 @@ section h1 {
     font-weight: 500;
     line-height: 36px;
 }
+
 .sport-card-subtitle {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
@@ -500,6 +560,7 @@ section h1 {
     padding-bottom: 9px;
     border-bottom: 1px solid #111;
 }
+
 .sport-card-content {
     display: flex;
     flex-direction: column;
@@ -511,41 +572,48 @@ section h1 {
     .sport-section .navigation {
         display: none;
     }
+
     .sport-card-container {
         flex-direction: column;
     }
+
     .sport-card {
         flex-direction: row;
         align-items: center;
         margin-bottom: 20px;
         justify-content: space-between;
     }
+
     .sport-card img {
         width: 110px;
         height: 110px;
         order: 2;
         border-radius: 10px;
     }
+
     .sport-card-content {
         width: 60%;
         order: 1;
     }
+
     .sport-card-title {
         color: var(--707072, #707072);
         font-family: "Noto Sans KR";
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        line-height: 24.5px;        
+        line-height: 24.5px;
     }
+
     .sport-card-subtitle {
         color: var(--111111, #111);
         font-family: "Noto Sans KR";
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
-        line-height: 35px;        
+        line-height: 35px;
     }
+
     .sport-btn {
         display: none;
     }
@@ -558,16 +626,19 @@ section h1 {
     justify-content: space-between;
     gap: 20px;
 }
+
 .membership-card {
     flex: 0 0 calc(33.333% - 14px);
     display: flex;
     flex-direction: column;
 }
+
 .membership-card img {
     width: 100%;
     height: auto;
     display: block;
 }
+
 .membership-card-content {
     display: flex;
     flex-direction: column;
@@ -575,22 +646,25 @@ section h1 {
     gap: 16px;
     margin-top: 16px;
 }
+
 .membership-card-title {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    line-height: 36px;    
+    line-height: 36px;
 }
+
 .membership-card-subtitle {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px;    
+    line-height: 28px;
 }
+
 .membership-btn {
     display: inline-block;
     padding: 8px 16px;
@@ -601,7 +675,7 @@ section h1 {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px;    
+    line-height: 28px;
     text-decoration: none;
     border-radius: 30px;
 }
@@ -614,10 +688,12 @@ section h1 {
         padding-bottom: 20px;
         width: calc(100% + 24px);
     }
+
     .membership-card {
         flex: 0 0 80%;
         scroll-snap-align: start;
     }
+
     .membership-card:last-child {
         margin-right: 20px;
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
@@ -9,209 +10,218 @@
     <script src="../../components/header/index.js"></script>
     <script src="../../components/footer/index.js"></script>
 </head>
+
 <body>
+    <!-- 네비게이션바 -->
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
-   
-    <div class="container">    
-    <div id="listFilter" class="list-filter">
-        <h2>신제품 (741)</h2>
-        <div class="product-controls">
-            <button id="hideFilters" class="control-button"><p>필터 숨기기</p> <img src="../../assets/filter.svg"/></button>
-            <div class="sort-dropdown">
-                <button id="sortButton" class="control-button"><p>정렬 기준</p> <img src="../../assets/arrowBottom.svg"/></button>
-                <ul id="sortOptions" class="sort-options">
-                    <li>추천순</li>
-                    <li>신상품순</li>
-                    <li>높은 가격순</li>
-                    <li>낮은 가격순</li>
-                </ul>
+
+    <!-- 컨텐츠 시작 -->
+    <div class="container">
+        <!-- 상품필터 섹션 -->
+        <div id="listFilter" class="list-filter">
+            <h2>신제품 (741)</h2>
+            <div class="product-controls">
+                <button id="hideFilters" class="control-button">
+                    <p>필터 숨기기</p> <img src="../../assets/filter.svg" />
+                </button>
+                <div class="sort-dropdown">
+                    <button id="sortButton" class="control-button">
+                        <p>정렬 기준</p> <img src="../../assets/arrowBottom.svg" />
+                    </button>
+                    <ul id="sortOptions" class="sort-options">
+                        <li>추천순</li>
+                        <li>신상품순</li>
+                        <li>높은 가격순</li>
+                        <li>낮은 가격순</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="list-container">
-        <aside class="sidebar">
-            <div class="main-categories">                   
-                <ul>                  
-                    <li><a href="#">신발</a></li>
-                    <li><a href="#">탑 & 티셔츠</a></li>
-                    <li><a href="#">후디 & 크루</a></li>
-                    <li><a href="#">재킷 & 베스트</a></li>
-                    <li><a href="#">팬츠 & 타이츠</a></li>
-                    <li><a href="#">쇼츠</a></li>
-                    <li><a href="#">스포츠 브라</a></li>
-                    <li><a href="#">트랙수트</a></li>
-                    <li><a href="#">점프수트 & 룸퍼스</a></li>
-                    <li><a href="#">스커트 & 드레스</a></li>
-                    <li><a href="#">양말</a></li>
-                    <li><a href="#">용품</a></li>                    
-                </ul>
-            </div>                 
-            <div class="filter-category">
-                <h3>성별</h3>
-                <label><input type="checkbox"> 남성</label>
-                <label><input type="checkbox"> 여성</label>
-                <label><input type="checkbox"> 유니섹스</label>
-            </div>
-            <div class="filter-category">
-                <h3>키즈</h3>
-                <label><input type="checkbox"> 남아</label>
-                <label><input type="checkbox"> 여아</label> 
-            </div>
-            <div class="filter-category">
-                <h3>키즈 연령</h3>
-                <label><input type="checkbox"> 베이비(0-3세)</label>
-                <label><input type="checkbox"> 리틀키즈(3-7세)</label>
-                <label><input type="checkbox"> 주니어(7-15세)</label>
-            </div>
-            <div class="filter-category">
-                <h3>가격대</h3>
-                <label><input type="checkbox"> 0 - 50,000 원</label>
-                <label><input type="checkbox"> 50,000 - 100,000 원</label>
-                <label><input type="checkbox"> 100,000 - 150,000 원</label>
-                <label><input type="checkbox"> 150,000 - 200,000 원</label>
-            </div>
-            <div class="filter-category">
-                <div style="height: 150px;"></div>
-            </div>
-        </aside>
-        <div class="filter-button">
-            <p>741개의 결과</p>
+        <!-- 사이드바(왼쪽) -->
+        <div class="list-container">
+            <aside class="sidebar">
+                <div class="main-categories">
+                    <ul>
+                        <li><a href="#">신발</a></li>
+                        <li><a href="#">탑 & 티셔츠</a></li>
+                        <li><a href="#">후디 & 크루</a></li>
+                        <li><a href="#">재킷 & 베스트</a></li>
+                        <li><a href="#">팬츠 & 타이츠</a></li>
+                        <li><a href="#">쇼츠</a></li>
+                        <li><a href="#">스포츠 브라</a></li>
+                        <li><a href="#">트랙수트</a></li>
+                        <li><a href="#">점프수트 & 룸퍼스</a></li>
+                        <li><a href="#">스커트 & 드레스</a></li>
+                        <li><a href="#">양말</a></li>
+                        <li><a href="#">용품</a></li>
+                    </ul>
+                </div>
+                <div class="filter-category">
+                    <h3>성별</h3>
+                    <label><input type="checkbox"> 남성</label>
+                    <label><input type="checkbox"> 여성</label>
+                    <label><input type="checkbox"> 유니섹스</label>
+                </div>
+                <div class="filter-category">
+                    <h3>키즈</h3>
+                    <label><input type="checkbox"> 남아</label>
+                    <label><input type="checkbox"> 여아</label>
+                </div>
+                <div class="filter-category">
+                    <h3>키즈 연령</h3>
+                    <label><input type="checkbox"> 베이비(0-3세)</label>
+                    <label><input type="checkbox"> 리틀키즈(3-7세)</label>
+                    <label><input type="checkbox"> 주니어(7-15세)</label>
+                </div>
+                <div class="filter-category">
+                    <h3>가격대</h3>
+                    <label><input type="checkbox"> 0 - 50,000 원</label>
+                    <label><input type="checkbox"> 50,000 - 100,000 원</label>
+                    <label><input type="checkbox"> 100,000 - 150,000 원</label>
+                    <label><input type="checkbox"> 150,000 - 200,000 원</label>
+                </div>
+                <div class="filter-category">
+                    <div style="height: 150px;"></div>
+                </div>
+            </aside>
 
-            <div class="filter">
-                <span>필터</span>
-                <img src="../../assets/filter.svg"/>
+            <!-- 필터 헤더 -->
+            <div class="filter-button">
+                <p>741개의 결과</p>
+                <div class="filter">
+                    <span>필터</span>
+                    <img src="../../assets/filter.svg" />
+                </div>
             </div>
+
+            <!-- 메인 상품리스트 -->
+            <main class="products">
+                <div class="product-grid">
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item1.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item2.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item3.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item4.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item5.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item6.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item7.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item8.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                    <a href="../itemDetail" class="product-card">
+                        <img src="../../assets/item9.png" alt="언스트럭처 데님 캡">
+                        <div class="product-contents">
+                            <div class="product-title">신제품</div>
+                            <div class="product-subtitle">나이키 클럽</div>
+                            <div class="product-colors">언스트럭처 데님 캡 <br /> 1개 색상</div>
+                            <div class="product-price">39,000 원</div>
+                        </div>
+                    </a>
+                </div>
+            </main>
         </div>
-        <main class="products">
-            <div class="product-grid">
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item1.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-              
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item2.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item3.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item4.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item5.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item6.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item7.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item8.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>
-                <a href="../itemDetail" class="product-card">
-                    <img src="../../assets/item9.png" alt="언스트럭처 데님 캡">
-                   <div class="product-contents">
-                    <div class="product-title">신제품</div>
-                    <div class="product-subtitle">나이키 클럽</div>
-                    <div class="product-colors">언스트럭처 데님 캡 <br/> 1개 색상</div>
-                    <div class="product-price">39,000 원</div>
-                   </div>
-                </a>           
-            </div>        
-        </main>
     </div>
-</div>
-<nike-footer></nike-footer>
-<script>
+    <!-- 컨텐츠 끝 -->
 
-const hideFiltersButton = document.getElementById('hideFilters');
-const sidebar = document.querySelector('.sidebar');
-const sortButton = document.getElementById('sortButton');
-const sortOptions = document.getElementById('sortOptions');
+    <!-- 푸터 -->
+    <nike-footer></nike-footer>
 
-const stickyElement = document.getElementById('listFilter');
-  const stickyOffset = stickyElement.offsetTop;
+    <script>
+        const hideFiltersButton = document.getElementById('hideFilters');
+        const sidebar = document.querySelector('.sidebar');
+        const sortButton = document.getElementById('sortButton');
+        const sortOptions = document.getElementById('sortOptions');
 
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > stickyOffset) {
-      stickyElement.querySelector('h2').classList.add('fixed');
-    } else {
-        stickyElement.querySelector('h2').classList.remove('fixed');
-    }
-  });
+        const stickyElement = document.getElementById('listFilter');
+        const stickyOffset = stickyElement.offsetTop;
 
-hideFiltersButton.addEventListener('click', () => {
-    sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';    
-    hideFiltersButton.querySelector('p').textContent = sidebar.style.display === 'none' ? '필터 보이기' : '필터 숨기기';    
-});
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > stickyOffset) {
+                stickyElement.querySelector('h2').classList.add('fixed');
+            } else {
+                stickyElement.querySelector('h2').classList.remove('fixed');
+            }
+        });
 
-sortButton.addEventListener('click', () => {
-    sortOptions.classList.toggle('show');
-});
+        hideFiltersButton.addEventListener('click', () => {
+            sidebar.style.display = sidebar.style.display === 'none' ? 'block' : 'none';
+            hideFiltersButton.querySelector('p').textContent = sidebar.style.display === 'none' ? '필터 보이기' : '필터 숨기기';
+        });
 
-document.addEventListener('click', (event) => {
-    if (!sortButton.contains(event.target) && !sortOptions.contains(event.target)) {
-        // sortOptions.classList.remove('show');
-    }
-});
+        sortButton.addEventListener('click', () => {
+            sortOptions.classList.toggle('show');
+        });
 
-sortOptions.addEventListener('click', (event) => {
-    if (event.target.tagName === 'LI') {
-        // sortButton.textContent = event.target.textContent;
-        sortButton.querySelector('p').textContent = event.target.textContent;
-        sortOptions.classList.remove('show');       
-    }
-});
-</script>
+        sortOptions.addEventListener('click', (event) => {
+            if (event.target.tagName === 'LI') {                
+                sortButton.querySelector('p').textContent = event.target.textContent;
+                sortOptions.classList.remove('show');
+            }
+        });
+    </script>
 </body>
+
 </html>

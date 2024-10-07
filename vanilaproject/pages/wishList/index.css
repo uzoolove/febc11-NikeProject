@@ -1,92 +1,99 @@
+/* 공통속성 */
 .container {
     padding: 48px;
 }
 
 h1 {
     color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px; /* 150% */
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
 }
 
+/* 타이틀 */
 .wishlist-title {
     display: flex;
     align-items: center;
-    justify-content: space-between;    
-    
+    justify-content: space-between;
+
 }
 
+/* 장바구니추가 버튼 */
 .wishlist-button {
     padding: 6px 16px;
     border-radius: 999px;
     border: 1px solid var(--CACACB, #CACACB);
-    background: var(--FFFFFF, #FFF);    
+    background: var(--FFFFFF, #FFF);
     color: var(--111111, #111);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-cursor: pointer;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    cursor: pointer;
 }
 
-.wishlist-card {
-    width: 50%;    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;    
-}
-
+/* 상품이미지 컨테이너 */
 .wishlist-grid {
-    display: flex;  
+    display: flex;
     gap: 33.47px;
     padding-top: 57px;
 }
 
+/* 상품이미지 */
+.wishlist-card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 상품이미지 속성 */
 .wishlist-card img {
     object-fit: cover;
     width: 100%;
     height: auto;
 }
 
+/* 상품상세 */
 .product-info {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
     padding-top: 6.61px;
 }
 
 .product-category h2 {
     color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
 .product-category p {
     color: var(--111111, #757575);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .product-info p {
     color: var(--111111, #111);
-text-align: right;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-text-align: left;
+    text-align: right;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
 }
 
 .wishlist-grid .wishlist-button {
@@ -94,17 +101,19 @@ text-align: left;
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 24px;
+    }
+
     h1 {
         color: var(--111111, #111);
         font-family: "Noto Sans KR";
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
-        line-height: 30px; /* 150% */
+        line-height: 30px;
     }
-    .container {
-        padding: 24px;
-    }
+
     .product-info {
         flex-direction: column;
         align-items: flex-start;
@@ -117,19 +126,19 @@ text-align: left;
 
     .product-category h2 {
         color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 21px; /* 150% */
+        font-family: "Noto Sans KR";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21px;
     }
 
     .product-category p {
         color: var(--111111, #757575);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 21px;
+        font-family: "Noto Sans KR";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 21px;
     }
 }

@@ -1,31 +1,37 @@
+/* 공통속성 */
 .container {
     max-width: 502px;
     margin: 0 auto;
 }
+
 h1 {
     font-size: 28px;
-    padding-top: 20px;    
+    padding-top: 20px;
 }
 
+/* 텍스트필드 컨테이너 */
 .input-group {
     display: flex;
     height: 56px;
     border-radius: 8px;
     border: 1px solid var(--707072, #707072);
-    overflow: hidden;    
+    overflow: hidden;
     margin-top: 60px;
     align-items: center;
 }
+
 input {
     width: 100%;
-    margin: 12px;            
-    border: none;    
+    margin: 12px;
+    border: none;
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */       
+    line-height: 24px;
 }
+
+/* 버튼 */
 .btn {
     display: inline-flex;
     padding: 12px 30px;
@@ -36,50 +42,59 @@ input {
     background: var(--111111, #111);
     border: none;
     color: var(--FFFFFF, #FFF);
-text-align: center;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-margin-top: 64px;
+    text-align: center;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    margin-top: 64px;
 }
+
 .btn-container {
     display: flex;
     justify-content: space-between;
 }
+
 .btn-secondary {
     background-color: white;
-    color: #000;        
+    color: #000;
     border: 1px solid var(--111111, #111);
 }
+
+/* 헬프텍스트 */
 .help-text {
     color: #757575;
     font-family: Pretendard;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     padding-top: 46px;
 }
+
 .help-text a {
     text-decoration: underline;
 }
+
+/* 스텝별 보임속성 설정 */
 .step {
     display: none;
 }
+
 .step.active {
     display: block;
 }
 
+/* 유저이메일 */
 .user-email {
     margin-top: 10px;
     color: var(--111111, #111);
-font-family: Pretendard;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 150% */
+    font-family: Pretendard;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 @media (max-width: 768px) {
@@ -87,11 +102,9 @@ line-height: 24px; /* 150% */
         padding-left: 36px;
         padding-right: 36px;
     }
-
     .input-group {
         margin-top: 28px;
     }
-
     .btn {
         margin-top: 40px;
     }

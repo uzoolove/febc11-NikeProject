@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +10,65 @@
     <script src="../../components/header/index.js"></script>
     <script src="../../components/footer/index.js"></script>
 </head>
+
 <body>
+    <!-- 네비게이션바 -->
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+
+    <!-- 컨텐츠 시작 -->
     <div class="container">
         <div class="wishlist-title">
+            <!-- 제목 & 수정버튼 -->
             <h1>위시리스트</h1>
             <span class="wishlist-button">
                 수정
             </span>
         </div>
+
+        <!-- 상품리스트 컨테이너 -->
         <div class="wishlist-grid">
+            <!-- 상품1 -->
             <div class="wishlist-card">
-                <img  src="../../assets/wishlist.png"/>
-               <div class="product-info">
-                <div class="product-category">
-                    <h2>나이키 줌 보메로 5</h2>
-                    <p>남성 신발</p>
-                </div>
+                <img src="../../assets/wishlist.png" />
+                <div class="product-info">
+                    <div class="product-category">
+                        <h2>나이키 줌 보메로 5</h2>
+                        <p>남성 신발</p>
+                    </div>
 
-                <p class="product-price">
-                    189,000 원
-                </p>
-               </div>
-               <span class="wishlist-button">
-                장바구니에 추가
-               </span>
-            </div>       
+                    <p class="product-price">
+                        189,000 원
+                    </p>
+                </div>
+                <span class="wishlist-button">
+                    장바구니에 추가
+                </span>
+            </div>
+            <!-- 상품2 -->
             <div class="wishlist-card">
-                <img  src="../../assets/wishlist.png"/>
-               <div class="product-info">
-                <div class="product-category">
-                    <h2>나이키 줌 보메로 5</h2>
-                    <p>남성 신발</p>
-                </div>
+                <img src="../../assets/wishlist.png" />
+                <div class="product-info">
+                    <div class="product-category">
+                        <h2>나이키 줌 보메로 5</h2>
+                        <p>남성 신발</p>
+                    </div>
 
-                <p class="product-price">
-                    189,000 원
-                </p>
-               </div>
-               <span class="wishlist-button">
-                장바구니에 추가
-               </span>
-            </div>       
+                    <p class="product-price">
+                        189,000 원
+                    </p>
+                </div>
+                <span class="wishlist-button">
+                    장바구니에 추가
+                </span>
+            </div>
+
+            <!-- 추가적인 상품인 이곳에 추가 -->
         </div>
     </div>
+    <!-- 컨텐츠 끝 -->
+
+    <!-- 푸터 -->
     <nike-footer></nike-footer>
 </body>
+
 </html>

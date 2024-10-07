@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나이키 프로젝트 | 로그인</title>
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="./index.css">  
+    <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
+    <!-- 컨텐츠 시작 -->
     <div class="container">
+        <!-- 로고 -->
         <img src="../../assets/logo.svg" alt="Nike Logo" class="nike-logo">
+
+        <!-- step 1 -->
         <div class="step active" id="step1">
             <h1>가입 또는 로그인을 위해 이메일을 입력해주세요.</h1>
             <div class="input-group">
                 <input type="email" id="email" placeholder="이메일" required>
             </div>
             <p class="help-text">계속 진행하시면 나이키의 <a>개인정보 처리방침</a> 및 <a>이용약관</a>에 동의하시는 것으로 간주됩니다.</p>
-            <button class="btn" id="continueBtn">계속</button>           
+            <button class="btn" id="continueBtn">계속</button>
         </div>
+        
+        <!-- step2 -->
         <div class="step" id="step2">
             <h1>비밀번호를 입력하세요.</h1>
             <p class="user-email"></p>
             <div class="input-group">
                 <input type="password" id="password" placeholder="비밀번호" required>
-                <img src="../../assets/eyeSlash.svg" style="width: 20px; height: 20px; padding: 16px;" alt="비밀번호 입력"/>
+                <img src="../../assets/eyeSlash.svg" style="width: 20px; height: 20px; padding: 16px;" alt="비밀번호 입력" />
             </div>
             <p class="help-text"><a>비밀번호 찾기</a></p>
             <div class="btn-container">
-               
-            <button class="btn btn-secondary" id="backBtn">이전</button>
-            <button class="btn" id="loginBtn">로그인</button>
+
+                <button class="btn btn-secondary" id="backBtn">이전</button>
+                <button class="btn" id="loginBtn">로그인</button>
             </div>
         </div>
     </div>
+    <!-- 컨텐츠 끝 -->
 
     <script>
         const email = document.getElementById('email');
@@ -47,8 +56,8 @@
         continueBtn.addEventListener('click', () => {
             if (email.value != "") {
                 step1.classList.remove('active');
-            step2.classList.add('active');
-            userEmail.textContent = email.value;
+                step2.classList.add('active');
+                userEmail.textContent = email.value;
             } else {
                 confirm("이메일을 입력해주세요.")
             }
@@ -60,4 +69,5 @@
         });       
     </script>
 </body>
+
 </html>

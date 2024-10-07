@@ -30,12 +30,12 @@ class NikeFooter extends HTMLElement {
                     margin-bottom: 20px;
                 }
                 .footer-section h3 {
-                   color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 24.5px; /* 175% */
+                    color: var(--111111, #111);
+                    font-family: "Noto Sans KR";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24.5px;
                     cursor: pointer;
                     margin-bottom: 31.75px;
                 }
@@ -49,12 +49,12 @@ line-height: 24.5px; /* 175% */
                 }
                 .footer-section ul li a {                    
                     text-decoration: none;
-                   color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 24.5px; /* 175% */
+                    color: var(--707072, #707072);
+                    font-family: "Noto Sans KR";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24.5px;
                 }
                 .footer-bottom {
                     padding-top: 20px;
@@ -66,29 +66,29 @@ line-height: 24.5px; /* 175% */
                     display: block;
                     margin-bottom: 10px;
                     color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 24.5px; /* 175% */
+                    font-family: "Noto Sans KR";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24.5px; 
                 }
                 .company-info {
                     margin-top: 20px;
                     color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24.5px; /* 175% */
+                    font-family: "Noto Sans KR";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24.5px; 
                 }
                 .toggle-icon::after {
-                   background: url(../../assets/arrowBottom.svg) no-repeat 0px 0px;      
-                   content: "";    
-                   display: inline-block;
+                    background: url(../../assets/arrowBottom.svg) no-repeat 0px 0px;      
+                    content: "";    
+                    display: inline-block;
                     float: right;
                     transition: transform 0.3s ease;
                     width: 24px;
-height: 24px;
+                    height: 24px;
                 }
                 .footer-section.active .toggle-icon::after {
                     transform: rotate(180deg);

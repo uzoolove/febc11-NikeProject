@@ -12,16 +12,23 @@
 </head>
 
 <body>
+    <!-- 네비게이션바 -->
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+    <!-- 장바구니 버튼(모바일 버전에서만 나타납니다) -->
     <button class="shopping-cart-button">장바구니</button>
+
+    <!-- 컨텐츠 시작 -->
     <div class="container">
+        <!-- 상품명, 카테고리, 가격(모바일 버전에서만 나타납니다) -->
         <div class="product prodcut-mobile">
             <h1 class="product-title">상품명</h1>
             <p class="product-category">여성 신발</p>
             <p class="product-price">139,000 원</p>
         </div>
-      
+
+        <!-- 상품이미지 컨테이너 -->
         <div class="product-images">
+            <!-- 상품이미지 리스트 -->
             <div class="thumbnail-list-wrapper">
                 <div class="thumbnail-list">
                     <img src="../../assets/productImage.png" alt="썸네일 1" class="thumbnail">
@@ -39,10 +46,13 @@
 
                 </div>
             </div>
+            <!-- 상품이미지 -->
             <div class="main-image-container">
                 <img src="../../assets/productImage.png" alt="상품" class="main-image">
             </div>
         </div>
+
+        <!-- 상품 상세 정보 -->
         <div class="product-info">
             <!-- 상품 -->
             <div class="product">
@@ -69,12 +79,19 @@
                 <button class="size-button">280</button>
                 <button class="size-button">285</button>
             </div>
+
+            <!-- 장바구니 버튼 -->
             <button class="add-to-cart">장바구니</button>
+
+            <!-- 위시리스트 버튼 -->
             <button class="wishlist">위시리스트 <img src="../../assets/heart.svg" /></button>
+
+            <!-- 상품설명 캡션 -->
             <div class="product-caption">
                 이 제품은 무게 기준 20% 이상 재생 소재를 사용해
                 제작되었습니다.
             </div>
+            <!-- 상품 상세설명 -->
             <div class="product-description">
                 <p>
                     나이키가 세계적인 무대에 오르는 브레이크 댄서를 위해
@@ -99,8 +116,11 @@
                     더했습니다.
                 </p>
             </div>
+
+            <!-- 토글 섹션 -->
             <div style="padding-top: 64px;" class="toggle-section">
                 <h2 class="product-detail">상품 상세 정보 보기</h2>
+                <!-- 무료 배송 및 반품 -->
                 <div class="toggle-title">
                     <h3>무료 배송 및 반품</h3>
                     <img src="../../assets/arrowBottom.svg" />
@@ -123,34 +143,37 @@
                     </p>
                 </div>
             </div>
+            <!-- 제작 과정 -->
             <div class="toggle-section">
                 <div class="toggle-title">
                     <h3>제작 과정</h3>
                     <img src="../../assets/arrowBottom.svg" />
                 </div>
                 <div class="toggle-content">
-                    <!-- 리뷰 내용 -->
+                    <!-- 이곳에 토글 클릭시 나타날 컨텐츠가 들어갑니다. -->
                 </div>
             </div>
+            <!-- 리뷰 -->
             <div class="toggle-section">
                 <div class="toggle-title">
                     <h3>리뷰(0)</h3>
                     <div style="display: flex; align-items: center; gap: 14px;">
-                        <!-- 평점 -->
+
                         <div>
                             <img src="../../assets/star.svg" />
                             <img src="../../assets/star.svg" />
                             <img src="../../assets/star.svg" />
                         </div>
-                        <!-- 토글 -->
+
                         <img src="../../assets/arrowBottom.svg" />
                     </div>
 
                 </div>
                 <div class="toggle-content">
-                    <!-- 추가 정보 내용 -->
+
                 </div>
             </div>
+            <!-- 추가 정보 -->
             <div class="toggle-section">
                 <div class="toggle-title">
                     <h3>추가 정보</h3>
@@ -158,25 +181,10 @@
                 </div>
                 <div class="toggle-content">
                     <p>
-                        일반 배송<br>
-                        • 배송지역: 전국 (일부 지역 제외)<br>
-                        • 배송비: 무료배송<br>
-                        • 제품 수령일로부터 14일 이내 제품에 대해서만 무료 반품 서비스가 가능합니다.<br><br>
-
-                        오늘도착 서비스<br>
-                        • 이용시간: 오전 10시 30분까지 결제 시, 당일 도착 (일요일, 공휴일 제외)<br>
-                        • 서비스지역: 서울∙과천∙의왕∙군포∙수원∙성남∙안양시 전체, 용인시 수지구∙기흥구, 부천시 중동∙상동∙심곡동<br>
-                        • 서비스비용: 5,000원<br><br>
-
-                        A/S 안내<br>
-                        • 나이키 온라인에서 구매하신 제품에 대한 A/S는 나이키코리아 고객센터(080-022-0182)에서 유선으로만 접수 가능합니다.
-
                     </p>
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <!-- 추천 제품 -->
@@ -213,7 +221,11 @@
             </div>
         </div>
     </div>
+    <!-- 컨텐츠 끝 -->
+
+    <!-- 푸터 -->
     <nike-footer></nike-footer>
+
     <script>
         document.querySelectorAll('.toggle-title').forEach(title => {
             title.addEventListener('click', () => {

@@ -1,86 +1,90 @@
+/* 공통속성 */
 .container {
-    display: flex;        
-}
-.sidebar {
-    width: 400px;
-    padding: 36px 32px 48px 32px;
-    overflow-y: auto;    
     display: flex;
-    flex-direction: column;
 }
-.map-container {
-    flex-grow: 1;    
-}
-.map-container img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 48px;
-}
+
 h1 {
     color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: 36px; /* 150% */
+    font-family: "Noto Sans KR";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
     padding-bottom: 44px;
 }
 
 p {
     color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24.5px; /* 175% */
+    font-family: "Noto Sans KR";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.5px;
 }
+
+/* 사이드바 */
+.sidebar {
+    width: 400px;
+    padding: 36px 32px 48px 32px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 검색바 */
 .search-container {
     display: flex;
     flex-direction: column;
     padding-bottom: 24.75px;
 }
-.search-input {    
+
+.search-input {
     padding: 12px 16px;
     border-radius: 8px;
     border: 1px solid var(--707072, #707072);
     font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-margin-bottom: 28.75px;
-display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-bottom: 28.75px;
+    display: flex;
 }
 
 .search-input input {
     border: none;
     color: #111;
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
-width: 100%;
+    font-family: "Noto Sans KR";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    width: 100%;
 }
+
+/* 매장목록 */
 .store-list {
     list-style-type: none;
     flex-grow: 1;
     overflow-y: auto;
 }
+
 .store-item {
     padding: 15px 0;
     border-bottom: 1px solid #e5e5e5;
 }
+
 .store-name {
     color: var(--111111, #111);
     font-family: "Noto Sans KR";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 28px; /* 175% */
+    line-height: 28px;
 }
-.store-address, .store-phone {
+
+.store-address,
+.store-phone {
     color: var(--111111, #707072);
     font-family: "Noto Sans KR";
     font-size: 16px;
@@ -88,64 +92,92 @@ width: 100%;
     font-weight: 400;
     line-height: 28px;
 }
+
+/* 맵뷰 */
+.map-container {
+    flex-grow: 1;
+}
+
+.map-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 48px;
+}
+
+/* 모바일헤더 */
 .mobile-header {
     display: none;
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: 36px;
+    padding: 0 32px;
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
         margin: 0;
-    }        
+    }
+
     .sidebar {
         padding: 0px;
     }
-    .sidebar, .map-container {
-        width: 100%;        
+
+    .sidebar,
+    .map-container {
+        width: 100%;
     }
+
     .mobile-header {
         display: block;
-        padding: 15px;
-        background-color: #fff;
-        border-bottom: 1px solid #e5e5e5;
-        margin-top: 36px;
-        padding: 0 32px;
     }
+
     .mobile-tabs {
-        display: flex;        
+        display: flex;
         margin-top: 10px;
     }
-    .tab-button {        
+
+    .tab-button {
         padding: 10px;
         border: none;
         background-color: #fff;
         font-weight: bold;
         cursor: pointer;
         color: var(--707072, #707072);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
+        font-family: "Noto Sans KR";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
     }
+
     .tab-button.active {
         border-bottom: 2px solid #111;
         color: var(--111111, #111);
-font-family: "Noto Sans KR";
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: 28px; /* 175% */
+        font-family: "Noto Sans KR";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
     }
-    .sidebar, .map-container {
+
+    .sidebar,
+    .map-container {
         display: none;
     }
-    .sidebar.active, .map-container.active {
+
+    .sidebar.active,
+    .map-container.active {
         display: block;
     }
-    .sidebar h1, .sidebar .search-container {
-        display: none; /* 모바일에서 PC 버전의 타이틀과 검색바 숨김 */
+
+    .sidebar h1,
+    .sidebar .search-container {
+        display: none;
     }
+
     .store-item {
         padding: 24px;
     }

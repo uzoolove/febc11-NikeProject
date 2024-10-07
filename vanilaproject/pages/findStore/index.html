@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,12 @@
     <script src="../../components/header/index.js"></script>
     <script src="../../components/footer/index.js"></script>
 </head>
+
 <body>
-    <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+    <!-- 네비게이션바 -->
+    <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>    
+
+    <!-- 모바일 버전에서만 나타납니다 -->
     <div class="mobile-header">
         <h1>나이키 매장 찾기</h1>
         <div class="search-container">
@@ -23,17 +28,21 @@
         </div>
     </div>
 
+    <!-- 컨텐츠 시작-->
     <div class="container">
+        <!-- 사이드바 -->
         <div class="sidebar" id="storeList">
             <h1>나이키 매장 찾기</h1>
+            <!-- 검색바 -->
             <div class="search-container">
-               <div class="search-input">
-                <img src="../../assets/search.svg"/>
-                <input type="text"  placeholder="위치 검색">                
-               </div>
+                <div class="search-input">
+                    <img src="../../assets/search.svg" />
+                    <input type="text" placeholder="위치 검색">
+                </div>
                 <p>근처 매장: 15 개</p>
             </div>
-            
+
+            <!-- 매장목록 -->
             <ul class="store-list">
                 <li class="store-item">
                     <div class="store-name">Nike House of Innovation NYC</div>
@@ -47,7 +56,7 @@
                         New York, NY, 10019-6108, US</div>
                     <div class="store-phone"><span style="color: #9E3500;">영업 종료</span>• 익일 오전 10:00에 영업 시작</div>
                 </li>
-                
+
                 <li class="store-item">
                     <div class="store-name">Nike House of Innovation NYC</div>
                     <div class="store-address">650 5th Avenue
@@ -56,21 +65,27 @@
                 </li>
             </ul>
         </div>
-        <div class="map-container active" id="map">            
-            <div><img src="../../assets/map.svg"/></div>
+
+        <!-- 맵뷰 -->
+        <div class="map-container active" id="map">
+            <div><img src="../../assets/map.svg" /></div>
         </div>
     </div>
+     <!-- 컨텐츠 끝-->
+
+    <!-- 푸터 -->
     <nike-footer></nike-footer>
+
     <script>
         const tabButtons = document.querySelectorAll('.tab-button');
         const storeList = document.getElementById('storeList');
         const map = document.getElementById('map');
-    
+
         function setActiveTab(tabName) {
             tabButtons.forEach(button => {
                 button.classList.toggle('active', button.dataset.tab === tabName);
             });
-    
+
             if (window.innerWidth <= 768) {
                 if (tabName === 'list') {
                     storeList.style.display = 'block';
@@ -81,11 +96,11 @@
                 }
             }
         }
-    
+
         tabButtons.forEach(button => {
             button.addEventListener('click', () => setActiveTab(button.dataset.tab));
         });
-    
+
         // 초기 상태 설정
         function setInitialState() {
             if (window.innerWidth <= 768) {
@@ -96,7 +111,7 @@
                 tabButtons.forEach(button => button.classList.remove('active'));
             }
         }
-    
+
         window.addEventListener('resize', setInitialState);
         setInitialState();
     </script>

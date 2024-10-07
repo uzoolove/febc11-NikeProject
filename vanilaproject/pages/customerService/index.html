@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,24 @@
     <script src="../../components/header/index.js"></script>
     <script src="../../components/footer/index.js"></script>
 </head>
+
 <body>
+    <!-- 네비게이션바 -->
     <nav-bar menu-items='["New & Featured", "Men", "Women", "Kids", "Sale"]'></nav-bar>
+
+    <!-- 컨텐츠 컨테이너 -->
     <div class="container">
+
+        <!-- 타이틀 & 검색바 -->
         <h1>고객센터</h1>
         <div class="search-container">
             <input type="text" class="search-input" placeholder="무엇을 도와드릴까요?">
             <div class="search-icon">
-                <img src="../../assets/search_gray.svg" alt="검색"/>
+                <img src="../../assets/search_gray.svg" alt="검색" />
             </div>
         </div>
 
+        <!-- 빠른 지원 -->
         <div class="quick-support">
             <h2>빠른 지원</h2>
             <p>클릭 한 번으로 자주 묻는 질문에 대한 답변을 확인할 수 있습니다.</p>
@@ -80,55 +88,59 @@
                     <li><a href="#">결제 방법에는 어떤 것이 있나요?</a></li>
                 </ul>
             </div>
-         
+
         </div>
 
+        <!-- 문의하기 -->
         <div class="contact-section">
             <h2>문의하기</h2>
             <div class="contact-grid">
                 <div class="contact-item">
                     <div>
-                        <img src="../../assets/chat.svg"/>
-                    </div>
-                  <div class="contact-text">
-                    <h3>채팅 문의</h3>
-                    <p>매일 09:00 - 22:00</p>
-                    <p>현재: 상담원과 연결 가능</p>
-                  </div>
-                </div>
-                <div class="contact-item">
-                    <div>
-                        <img src="../../assets/device.svg" alt="전화 문의"/>
+                        <img src="../../assets/chat.svg" />
                     </div>
                     <div class="contact-text">
-                    <h3>전화 문의</h3>
-                    <p>080-022-0182</p>
-                    <p>현재: 전화 연결 가능</p>
+                        <h3>채팅 문의</h3>
+                        <p>매일 09:00 - 22:00</p>
+                        <p>현재: 상담원과 연결 가능</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div>
-                        <img src="../../assets/device.svg" alt="AS 문의"/>
+                        <img src="../../assets/device.svg" alt="전화 문의" />
                     </div>
                     <div class="contact-text">
-                    <h3>AS 문의</h3>
-                    <p>1644-4580</p>
-                    <p>월-금: 10:00 - 17:00 (공휴일 제외)</p>
+                        <h3>전화 문의</h3>
+                        <p>080-022-0182</p>
+                        <p>현재: 전화 연결 가능</p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <div>
-                        <img src="../../assets/pin.svg" alt="매장 찾기"/>
+                        <img src="../../assets/device.svg" alt="AS 문의" />
+                    </div>
+                    <div class="contact-text">
+                        <h3>AS 문의</h3>
+                        <p>1644-4580</p>
+                        <p>월-금: 10:00 - 17:00 (공휴일 제외)</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div>
+                        <img src="../../assets/pin.svg" alt="매장 찾기" />
                     </div>
                     <div class="contact-text">
                         <h3>매장 찾기</h3>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-<nike-footer></nike-footer>
+
+    <!-- 푸터 -->
+    <nike-footer></nike-footer>
     <script>
+        // 토글 기능 스크립트
         function toggleFAQ(event) {
             if (window.innerWidth <= 768) {
                 const faqItem = event.target.closest('.faq-item');
@@ -154,4 +166,5 @@
         });
     </script>
 </body>
+
 </html>
